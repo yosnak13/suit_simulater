@@ -3,12 +3,25 @@
   <head>
     <title>SuitSimulater</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <%= link_to "Suit simulater", '#', id: "logo" %>
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "home", '#' %></li>
+          <li><%= link_to "アカウント作成",   '#' %></li>
+          <li><%= link_to "ログイン", '#' %></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
