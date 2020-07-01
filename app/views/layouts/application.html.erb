@@ -13,7 +13,7 @@
         <%= link_to "Suit simulater", '#', id: "logo" %>
         <nav>
           <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "home", '#' %></li>
+          <li><%= link_to "Topページ", '#' %></li>
           <li><%= link_to "アカウント作成",   '#' %></li>
           <li><%= link_to "ログイン", '#' %></li>
           </ul>
@@ -23,6 +23,19 @@
 
     <div class="container">
       <%= yield %>
+
+      <footer class="footer">
+        <small>
+          Suit simulater by Y
+        </small>
+        <nav>
+          <ul>
+            <li><%= link_to "About this APP",   '#' %></li>
+            <li><%= link_to "Contact",   '#' %></li>
+          </ul>
+        </nav>
+      </footer>
     </div>
+
   </body>
 </html>
