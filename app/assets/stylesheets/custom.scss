@@ -4,6 +4,7 @@
 /* universal */
 body {
   padding-top: 150px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
@@ -12,6 +13,11 @@ h1 {
 
 h2 {
   font-size: 30px;
+}
+
+p {
+  font-size: 15px;
+
 }
 
 /*home-page*/
@@ -24,6 +30,9 @@ h2 {
 .discription {
   flex-basis: 40%;
   margin-top: 100px;
+  margin-left: auto!important;
+  margin-right: auto!important;
+  
 }
 
 .newsuit {
@@ -33,7 +42,7 @@ h2 {
   padding-top: 100px;
 }
 
-.three-items {
+.search-section {
   margin: 50px;
   border-top: 1px gray solid;
   padding-top: 50px;
@@ -44,6 +53,16 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+
+.items {
+  margin: 20px;
+  text-align: center;
+}
+
+.img-circle {
+  margin: 15px;
+  object-fit: cover;
 }
 
 /* footer */
