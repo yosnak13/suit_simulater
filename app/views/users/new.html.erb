@@ -4,34 +4,39 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages' %>
+
       <%= f.label :名前 %>
-      <%= f.text_field :name %>
+      <%= f.text_field :name, class: 'form-control' %>
 
       <%= f.label :メールアドレス %>
-      <%= f.email_field :email %>
+      <%= f.email_field :email, class: 'form-control' %>
 
-      <%= f.label :年齢 %>
-      <%= f.text_field :age %>
+      <label for="user_gender">年齢</label>
+        <select prompt="選択してください"  required="required" name="user[age]" id="age">
+          <option selected="selected" value="">選択してください</option>
+          <option value="1">10〜20代</option>
+          <option value="2">30代</option>
+          <option value="3">40代</option>
+          <option value="3">50代</option>
+          <option value="3">60代以上</option>
+        </select>
 
-      <div class="form-group">
       <label for="user_gender">性別</label>
-        <select prompt="選択してください"  required="required" name="user[gender]" id="user_gender">
-          <option value="">選択してください</option>
-          <option selected="selected" value="1">男性</option>
+        <select prompt="選択してください"  required="required" name="user[gender]" id="gender">
+          <option selected="selected" value="">選択してください</option>
+          <option value="1">男性</option>
           <option value="2">女性</option>
           <option value="3">その他</option>
         </select>
-      </div>
-
-      
 
       <%= f.label :パスワード %>
-      <%= f.password_field :password %>
+      <%= f.password_field :password, class: 'form-control' %>
 
       <%= f.label :password_confirmation, "パスワード（確認）" %>
-      <%= f.password_field :password_confirmation %>
+      <%= f.password_field :password_confirmation, class: 'form-control' %>
 
-      <%= f.submit "Create my account", class: "btn btn-primary" %>
+      <%= f.submit "アカウント作成", class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>
