@@ -26,7 +26,13 @@ $gray-medium-light: #eaeaea;
 /* universal */
 body {
   padding-top: 150px;
+  object-fit: cover;
+}
+
+#logo {
+  color: skyblue;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
 }
 
 h1 {
@@ -39,7 +45,6 @@ h2 {
 
 p {
   font-size: 15px;
-
 }
 
 /*home-page*/
@@ -74,17 +79,21 @@ p {
 .select {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
 }
 
 .items {
   margin: 20px;
   text-align: center;
+
 }
 
 .img-circle {
   margin: 15px;
   object-fit: cover;
+}
+
+.btn {
+  background-color: gray;
 }
 
 /* footer */
@@ -110,4 +119,18 @@ footer ul {
 footer ul li {
   float: left;
   margin-left: 15px;
+}
+
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
 }
