@@ -18,23 +18,12 @@
       <%= f.label :メールアドレス %>
       <%= f.email_field :email, class: 'form-control' %>
 
-      <label for="user_gender">年齢</label>
-        <select prompt="選択してください"  required="required" name="user[age]" id="age">
-          <option selected="selected" value="">選択してください</option>
-          <option value="1">10〜20代</option>
-          <option value="2">30代</option>
-          <option value="3">40代</option>
-          <option value="3">50代</option>
-          <option value="3">60代以上</option>
-        </select>
+      <%= f.label :年齢 %>
+      <%= f.select :age, [["10~20代","10~20代"],["30代","30代"],["40代","40代"],["50代","50代"],["60代以上","60代以上"]], {prompt:"選択してください"}, {class: 'form-control'} %>
 
-      <label for="user_gender">性別</label>
-        <select prompt="選択してください"  required="required" name="user[gender]" id="gender">
-          <option selected="selected" value="">選択してください</option>
-          <option value="1">男性</option>
-          <option value="2">女性</option>
-          <option value="3">その他</option>
-        </select>
+      <%= f.label :性別 %>
+      <%= f.select :gender, [["男性","男性"],["女性","女性"],["その他","その他"]], {prompt:"選択してください"}, {class: 'form-control'} %>
+
 
       <%= f.label :パスワード %>
       <%= f.password_field :password, class: 'form-control' %>

@@ -1,45 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SuitSimulater</title>
+    <title><%= yield(:title) %>| SuitSimulater</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= render 'layouts/shim' %>
   </head>
 
   <body>
-    <header class="navbar navbar-fixed-top navbar-inverse">
-      <div class="container">
-        <%= link_to "Suit simulater", root_path, id: "logo" %>
-        <nav>
-          <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "マイページ", root_path %></li>
-            <li><%= link_to "アカウント作成", signup_path %></li>
-            <li><%= link_to "ログイン", login_path %></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
+    <%= render 'layouts/header' %>
     <div class="container">
       <% flash.each do |message_type, message| %>
         <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
       <% end %>
       <%= yield %>
-
-      <footer class="footer">
-        <small>
-          Suit simulater by Y
-        </small>
-        <nav>
-          <ul>
-            <li><%= link_to "About this APP",   '#' %></li>
-            <li><%= link_to "Contact",   '#' %></li>
-          </ul>
-        </nav>
-      </footer>
+      <%= render 'layouts/footer' %>
       <%= debug(params) if Rails.env.development? %>
     </div>
-
   </body>
 </html>
