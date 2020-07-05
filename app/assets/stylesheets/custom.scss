@@ -30,9 +30,9 @@ body {
 }
 
 #logo {
-  color: skyblue;
-  font-family: Arial, Helvetica, sans-serif;
+  color: white;
   font-size: 40px;
+
 }
 
 h1 {
@@ -92,8 +92,16 @@ p {
   object-fit: cover;
 }
 
-.btn {
-  background-color: gray;
+/* header */
+.btn-outline-primary {
+    color: #007bff;
+    border-color: #007bff;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.navbar {
+  background-color: rgba(0,0,0,0.8);
 }
 
 /* footer */
