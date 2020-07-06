@@ -32,7 +32,6 @@ body {
 #logo {
   color: white;
   font-size: 40px;
-
 }
 
 h1 {
@@ -79,6 +78,7 @@ p {
 .select {
   display: flex;
   flex-wrap: wrap;
+  text-align: center;
 }
 
 .items {
