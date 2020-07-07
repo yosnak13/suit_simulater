@@ -3,9 +3,9 @@
     <%= link_to "Suit simulater", root_path, id: "logo" %>
 
     <ul class="nav navbar-nav navbar-right">
-      <li><%= link_to "スーツを探す", "#" %></li>
-      <li><%= link_to "シャツを探す", "#" %></li>
-      <li><%= link_to "ネクタイを探す", "#" %></li>
+      <li><%= link_to "スーツを探す", suit_path %></li>
+      <li><%= link_to "シャツを探す", shirt_path %></li>
+      <li><%= link_to "ネクタイを探す", tie_path %></li>
       <% if logged_in? %>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">マイアカウント <b class="caret"></b></a>
