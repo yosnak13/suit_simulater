@@ -2,7 +2,6 @@
 @import "bootstrap";
 
 /* mixins, variables, etc. */
-
 $gray-medium-light: #eaeaea;
 
 @mixin box_sizing {
@@ -12,7 +11,6 @@ $gray-medium-light: #eaeaea;
 }
 
 /* miscellaneous */
-
 .debug_dump {
   clear: both;
   float: left;
@@ -21,10 +19,7 @@ $gray-medium-light: #eaeaea;
   @include box_sizing;
 }
 
-
-
 /* universal */
-
 /* header */
 .btn-outline-primary {
     color: #007bff;
@@ -39,7 +34,7 @@ $gray-medium-light: #eaeaea;
 
 body {
    margin: 0;
-   padding-top: 100px;
+   padding-top: 65px;
    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;
    background-color: #e6e6e6;
    object-fit: cover;
@@ -81,19 +76,11 @@ li {
 nav {
    margin: 0 0 0 auto;
 }
-// headerのリスポンシブ化
-
 
 /*home-page*/
 .contents {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.contents-2 {
-  display: flex;
-  flex-wrap: wrap-reverse;
   justify-content: space-around;
 }
 
@@ -127,6 +114,21 @@ nav {
   object-fit: cover;
 }
 
+/* suit page*/
+.bg_test-text {
+    border:  solid 1px;                             /* 枠線指定 */
+    display:  inline-block;                         /* インラインブロックにする */
+    padding: 10px 20px;                             /* 余白指定 */
+    background-color: rgba(255, 255, 255, 0.7);     /* 背景色指定 */
+}
+.bg_test {
+    text-align:  center;    /* 文字中央寄せ */
+    padding:  300px;        /* 余白指定 */
+    border: solid 2px;      /* 枠線指定 */
+    background-image: url(/assets/WP.jpeg);    /* 背景画像指定 */
+    background-size: cover;
+}
+
 /* footer */
 
 footer {
@@ -140,16 +142,6 @@ footer {
 
 footer small{
   float: left;
-}
-
-footer ul {
-  float: right;
-  list-style: none;
-}
-
-footer ul li {
-  float: left;
-  margin-left: 15px;
 }
 
 
