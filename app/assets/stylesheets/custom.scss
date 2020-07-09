@@ -24,28 +24,6 @@ $gray-medium-light: #eaeaea;
 
 
 /* universal */
-body {
-  font-family: 'Open suns';
-  padding-top: 50px;
-  object-fit: cover;
-}
-
-#logo {
-  color: white;
-  font-size: 40px;
-}
-
-h1 {
-  font-size: 40px;
-}
-
-h2 {
-  font-size: 30px;
-}
-
-p {
-  font-size: 15px;
-}
 
 /* header */
 .btn-outline-primary {
@@ -55,10 +33,56 @@ p {
     margin-left: 5px;
 }
 
-.navbar {
-  background-color: rgba(0,0,0,0.8);
-
+* {
+   box-sizing: border-box;
 }
+
+body {
+   margin: 0;
+   padding-top: 100px;
+   font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;
+   background-color: #e6e6e6;
+   object-fit: cover;
+}
+
+header {
+    width: 100%;
+    padding: 30px 4% 10px;
+    background-color: #fff;
+    // background-color: rgba(0,0,0,0.8);
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+}
+
+
+h1 {
+   margin: 0; padding: 0;
+   font-size: 30px;
+}
+
+a {
+   text-decoration: none;
+   color: #4b4b4b;
+}
+
+ul {
+   list-style: none;
+   margin: 0;
+   display: flex;
+}
+
+li {
+   margin: 0 0 0 15px;
+   font-size: 14px;
+}
+// navタグを両端配置
+nav {
+   margin: 0 0 0 auto;
+}
+// headerのリスポンシブ化
+
 
 /*home-page*/
 .contents {
@@ -106,7 +130,7 @@ p {
 /* footer */
 
 footer {
-  margin-top: 45px;
+  margin: 45px;
   margin-bottom: 45px;
   padding-top: 50px;
   padding-bottom: 15px;
