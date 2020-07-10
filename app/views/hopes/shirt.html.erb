@@ -1,6 +1,8 @@
 <div>
-  <h1>あなたのイメージにあう組み合わせを選択してください</h1>
-
+  <h1>あなたが来てみたいスーツの色を選択してください</h1>
+  <%= image_tag "home.jpeg", size: "400x400", alt:"茶系スーツ", class:"zzz" %>
+  <%= image_tag "WP.jpeg", size: "400x400", alt:"茶系スーツ", class:"aaa" %>
+  <%= image_tag "tie.jpeg", size: "400x400", alt:"茶系スーツ", class:"bbb" %>
 </div>
 <div class="main-box">
   <div class="sub-box">
@@ -10,7 +12,7 @@
   </div>
   <div class="sub-box">
     <p>グレー</p>
-      <div class="pattern-gray">
+      <div class="pattern-gray" id="yyy">
       </div>
   </div>
   <div class="sub-box">
@@ -49,7 +51,12 @@
 </div>
 
 <script>
-  $("#xxx").on("click",function(){
-    $("").fadeIn(300);
+$("#xxx").on("click",function(){
+  $(".zzz").fadeIn(300);
+  $(".aaa").fadeOut();
+  });
+$("#yyy").on("click",function(){
+  $(".aaa").fadeIn(300);
+  $(".zzz").fadeOut();
   });
 </script>
