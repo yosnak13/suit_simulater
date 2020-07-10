@@ -9,10 +9,9 @@ Rails.application.routes.draw do
   delete '/logout',  to: 'sessions#destroy'
 
   #アイテム検索用ルーティング
-  get '/suit', to: 'static_pages#suit'
-  get '/tie', to: 'static_pages#tie'
-  get '/shirt', to: 'static_pages#shirt'
-
+  get '/suit', to: 'hopes#suit'
+  get '/shirt', to: 'hopes#shirt'
+  get '/tie', to: 'hopes#tie'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # root'application#hello'
 end
