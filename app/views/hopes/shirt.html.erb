@@ -1,57 +1,60 @@
-<div>
-  <h1>あなたが来てみたいスーツの色を選択してください</h1>
-  <div>
-    <%= image_tag "home.jpeg", size: "400x400", alt:"茶系スーツ", class:"zzz" %>
-    <%= image_tag "WP.jpeg", size: "400x400", alt:"茶系スーツ", class:"aaa" %>
-    <%= image_tag "tie.jpeg", size: "400x400", alt:"茶系スーツ", class:"bbb" %>
+<h1>あなたが着てみたいスーツの色を選択してください</h1>
+<div class="contents2">
+  <div class="suit_sample">
+    <div>
+      <%= image_tag "home.jpeg", size: "400x400", alt:"茶系スーツ", class:"zzz" %>
+      <%= image_tag "WP.jpeg", size: "400x400", alt:"茶系スーツ", class:"aaa" %>
+      <%= image_tag "tie.jpeg", size: "400x400", alt:"茶系スーツ", class:"bbb" %>
+    </div>
+  </div>
+
+  <div class="main-box">
+    <div class="sub-box">
+      <p>ネイビー</p>
+        <div class="pattern-navy" id="xxx">
+        </div>
+    </div>
+    <div class="sub-box">
+      <p>グレー</p>
+        <div class="pattern-gray" id="yyy">
+        </div>
+    </div>
+    <div class="sub-box">
+      <p>ダークグレー</p>
+        <div class="pattern-darkgray">
+        </div>
+    </div>
+    <div class="sub-box">
+      <p>ブラック</p>
+        <div class="pattern">
+        </div>
+    </div>
+    <div class="sub-box">
+      <p>茶</p>
+        <div class="pattern-brown">
+        </div>
+    </div>
   </div>
 </div>
 
-<div class="main-box">
-  <div class="sub-box">
-    <p>ネイビー</p>
-      <div class="pattern-navy" id="xxx">
-      </div>
+  <div class="main-box">
+    <div class="sub-box">
+      <p>無地</p>
+        <div class="pattern-navy">
+        </div>
+    </div>
+    <div class="sub-box">
+      <p>ストライプ</p>
+        <div class="pattern-gray">
+        </div>
+    </div>
+    <div class="sub-box">
+      <p>ウィンドウペン</p>
+        <div class="pattern-darkgray">
+        </div>
+    </div>
   </div>
-  <div class="sub-box">
-    <p>グレー</p>
-      <div class="pattern-gray" id="yyy">
-      </div>
-  </div>
-  <div class="sub-box">
-    <p>ダークグレー</p>
-      <div class="pattern-darkgray">
-      </div>
-  </div>
-  <div class="sub-box">
-    <p>ブラック</p>
-      <div class="pattern">
-      </div>
-  </div>
-  <div class="sub-box">
-    <p>茶</p>
-      <div class="pattern-brown">
-      </div>
-  </div>
-</div>
 
-<div class="main-box">
-  <div class="sub-box">
-    <p>無地</p>
-      <div class="pattern-navy">
-      </div>
-  </div>
-  <div class="sub-box">
-    <p>ストライプ</p>
-      <div class="pattern-gray">
-      </div>
-  </div>
-  <div class="sub-box">
-    <p>ウィンドウペン</p>
-      <div class="pattern-darkgray">
-      </div>
-  </div>
-</div>
 
 <script>
 $("#xxx").on("click",function(){
