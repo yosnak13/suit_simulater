@@ -2,26 +2,26 @@
 <div class="contents2">
   <div class="suit_sample">
     <div>
-      <%= image_tag "home.jpeg", size: "400x400", alt:"茶系スーツ", class:"zzz" %>
-      <%= image_tag "WP.jpeg", size: "400x400", alt:"茶系スーツ", class:"aaa" %>
-      <%= image_tag "tie.jpeg", size: "400x400", alt:"茶系スーツ", class:"bbb" %>
+      <%= image_tag "home.jpeg", size: "400x400", alt:"茶系スーツ", class:"xxx section" %>
+      <%= image_tag "WP.jpeg", size: "400x400", alt:"茶系スーツ", class:"yyy section" %>
+      <%= image_tag "tie.jpeg", size: "400x400", alt:"茶系スーツ", class:"zzz section" %>
     </div>
   </div>
 
   <div class="main-box">
     <div class="sub-box">
       <p>ネイビー</p>
-        <div class="pattern-navy" id="xxx">
+        <div class="pattern-navy secList" id="xxx">
         </div>
     </div>
     <div class="sub-box">
       <p>グレー</p>
-        <div class="pattern-gray" id="yyy">
+        <div class="pattern-gray secList" id="yyy">
         </div>
     </div>
     <div class="sub-box">
       <p>ダークグレー</p>
-        <div class="pattern-darkgray">
+        <div class="pattern-darkgray secList" id="zzz">
         </div>
     </div>
     <div class="sub-box">
@@ -57,12 +57,17 @@
 
 
 <script>
-$("#xxx").on("click",function(){
-  $(".zzz").fadeIn(300);
-  $(".aaa").fadeOut();
+$(function(){
+  $('.section').hide();
+
+  $('.secList').on('click',function(){
+    // クリックした要素の ID と違うクラス名のセクションを非表示
+    $('.section').not($('.'+$(this).attr('id'))).hide();
+    // クリックした要素の ID と同じクラスのセクションを表示
+    $('.'+$(this).attr('id')).show();
+
+    // toggle にすると、同じボタンを 2 回押すと非表示になる
+    // $('.'+$(this).attr('id')).toggle();
   });
-$("#yyy").on("click",function(){
-  $(".aaa").fadeIn(300);
-  $(".zzz").fadeOut();
-  });
+});
 </script>
