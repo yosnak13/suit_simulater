@@ -141,13 +141,13 @@ header {
 
 .main-box {
   margin       : auto;
-  width        : 400px;
-  height       : 400px;
+  width        : 380px;
+  height       : 380px;
   background   : #fff;
-  border: #000 solid 1px;
+  // border: #000 solid 1px;
   border-radius: 10%;
   display: flex;
-  // align-items: center;
+  align-items: center;
   flex-wrap: wrap;
 }
 
