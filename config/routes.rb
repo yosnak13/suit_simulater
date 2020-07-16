@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   get '/suit', to: 'hopes#suit'
   get '/shirt', to: 'hopes#shirt'
   get '/tie', to: 'hopes#tie'
+
+  get '/select_suit', to: 'hopes#select_suit'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # root'application#hello'
 end
