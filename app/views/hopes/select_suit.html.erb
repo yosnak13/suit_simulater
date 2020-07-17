@@ -1,7 +1,7 @@
 <div class="container">
   <p>あなたが着てみたいスーツの色をボックスの中から選択してください</p>
   <div class="contents2">
-    <div class="suit_sample">
+    <div class="suit_pic">
       <div>
         <%= image_tag "home.jpeg", size: "380x380", alt:"茶系スーツ", class:"xxx section" %>
         <%= image_tag "WP.jpeg", size: "380x380", alt:"茶系スーツ", class:"yyy section" %>
@@ -50,7 +50,7 @@ $(function(){
     // クリックした要素の ID と違うクラス名のセクションを非表示
     $(".section").not($("."+$(this).attr("id"))).hide();
     // クリックした要素の ID と同じクラスのセクションを表示
-    $("."+$(this).attr("id")).show();
+    $("."+$(this).attr("id")).show(500);
 
   });
 });
