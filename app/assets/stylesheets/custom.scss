@@ -117,15 +117,16 @@ header {
 
 /* suit page*/
 .bg_test-text {
-    border:  solid 1px;                             /* 枠線指定 */
     display:  inline-block;                         /* インラインブロックにする */
     padding: 10px 20px;                             /* 余白指定 */
-    background-color: rgba(255, 255, 255, 0.7);     /* 背景色指定 */
+    // background-color: rgba(255, 255, 255, 0.7);     /* 背景色指定 */
+    color: #fff;
+
 }
 .bg_test {
     text-align:  center;    /* 文字中央寄せ */
     padding:  300px;        /* 余白指定 */
-    border: solid 2px;      /* 枠線指定 */
+    // border: solid 2px;      /* 枠線指定 */
     background-image: url(/assets/WP.jpeg);    /* 背景画像指定 */
     background-size: cover;
 }
@@ -133,32 +134,27 @@ header {
 /* hopes box  */
 .suit_sample {
   flex-basis: 40%;
-  // margin-top: 100px;
-  // margin-left: auto;
-  // margin-right: auto;
   margin: auto;
 }
 
 .main-box {
-  margin       : auto;
-  width        : 380px;
-  height       : 380px;
+  align-items: center;
   background   : #fff;
-  // border: #000 solid 1px;
   border-radius: 10%;
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
+  height       : 380px;
+  margin       : auto;
+  width        : 380px;
 }
 
 .sub-box {
-  text-align: center;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
 .pattern {
-  margin       : auto;
   width        : 100px;
   height       : 100px;
   background   : #000;
@@ -166,48 +162,52 @@ header {
   border-radius: 10%;
 }
 .pattern-navy{
-  margin       : auto;
-  width        : 100px;
-  height       : 100px;
   background   : #000044;
   border: #fff solid 1px;
   border-radius: 10%;
+  height       : 100px;
+  // margin       : auto;
+  padding      : 0px;
+  width        : 100px;
 }
 
 .pattern-gray{
-  margin       : auto;
-  width        : 100px;
-  height       : 100px;
   background   : #a6a6a6;
   border: #fff solid 1px;
   border-radius: 10%;
+  height       : 100px;
+  // margin       : auto;
+  width        : 100px;
 }
 .pattern-darkgray{
-  margin       : auto;
-  width        : 100px;
-  height       : 100px;
   background   : #3c3c3c;
   border: #fff solid 1px;
   border-radius: 10%;
+  height       : 100px;
+  // margin       : auto;
+  width        : 100px;
 }
 .pattern-brown{
-  margin       : auto;
-  width        : 100px;
-  height       : 100px;
   background   : #663300;
   border: #fff solid 1px;
   border-radius: 10%;
+  height       : 100px;
+  // margin       : auto;
+  width        : 100px;
 }
 
-
+.btn_to_final {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  justify-content: space-around;
+}
 
 /* footer */
 
 footer {
   background-color: rgba(255, 255, 255, 0.87);
-  // margin-bottom: 45px;
-  padding-top: 50px;
-  padding-bottom: 15px;
+  padding: 50px 0 50px 0;
   color: #777;
   width: 100%;
   small {

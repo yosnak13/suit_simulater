@@ -1,62 +1,75 @@
-
 <div class="container">
-<p>あなたが着てみたいスーツの色をボックスの中から選択してください</p>
-<div class="contents2">
-  <div class="suit_sample">
-    <div>
-      <%= image_tag "home.jpeg", size: "400x400", alt:"茶系スーツ", class:"xxx section" %>
-      <%= image_tag "WP.jpeg", size: "400x400", alt:"茶系スーツ", class:"yyy section" %>
-      <%= image_tag "tie.jpeg", size: "400x400", alt:"茶系スーツ", class:"zzz section" %>
+  <p>あなたが着てみたいスーツの色をボックスの中から選択してください</p>
+  <div class="contents2">
+    <div class="suit_sample">
+      <div>
+        <%= image_tag "home.jpeg", size: "380x380", alt:"茶系スーツ", class:"xxx section" %>
+        <%= image_tag "WP.jpeg", size: "380x380", alt:"茶系スーツ", class:"yyy section" %>
+        <%= image_tag "tie.jpeg", size: "380x380", alt:"茶系スーツ", class:"zzz section" %>
+      </div>
+    </div>
+
+    <div class="main-box">
+      <div class="sub-box">
+        <p>ネイビー</p>
+          <div class="pattern-navy secList" id="xxx">
+          </div>
+      </div>
+      <div class="sub-box">
+        <p>グレー</p>
+          <div class="pattern-gray secList" id="yyy">
+          </div>
+      </div>
+      <div class="sub-box">
+        <p>ダークグレー</p>
+          <div class="pattern-darkgray secList" id="zzz">
+          </div>
+      </div>
+      <div class="sub-box">
+        <p>ブラック</p>
+          <div class="pattern secList">
+          </div>
+      </div>
+      <div class="sub-box">
+        <p>茶</p>
+          <div class="pattern-brown secList">
+          </div>
+      </div>
     </div>
   </div>
 
-  <div class="main-box">
-    <div class="sub-box">
-      <p>ネイビー</p>
-        <div class="pattern-navy secList" id="xxx">
-        </div>
-    </div>
-    <div class="sub-box">
-      <p>グレー</p>
-        <div class="pattern-gray secList" id="yyy">
-        </div>
-    </div>
-    <div class="sub-box">
-      <p>ダークグレー</p>
-        <div class="pattern-darkgray secList" id="zzz">
-        </div>
-    </div>
-    <div class="sub-box">
-      <p>ブラック</p>
-        <div class="pattern">
-        </div>
-    </div>
-    <div class="sub-box">
-      <p>茶</p>
-        <div class="pattern-brown">
-        </div>
-    </div>
+  <div class="btn_to_final">
+    <a class="btn btn-lg btn-outline-primary">これで決定！</a>
   </div>
-</div>
-
-<div class="contents">
-  <a class="btn btn-lg btn-outline-primary">これで決定！</a>
-</div>
-
 </div>
 
 <script>
 $(function(){
-  $('.section').hide();
-
-  $('.secList').on('click',function(){
+  $(".section").hide();
+  $(".secList").on("click",function(){
     // クリックした要素の ID と違うクラス名のセクションを非表示
-    $('.section').not($('.'+$(this).attr('id'))).hide();
+    $(".section").not($("."+$(this).attr("id"))).hide();
     // クリックした要素の ID と同じクラスのセクションを表示
-    $('.'+$(this).attr('id')).show();
+    $("."+$(this).attr("id")).show();
 
-    // toggle にすると、同じボタンを 2 回押すと非表示になる
-    // $('.'+$(this).attr('id')).toggle();
   });
 });
+
+$(function(){
+    $(".secList").hover(function(){
+      $(this).css("height", "80px");
+      $(this).css("width", "80px");
+      $(this).css("margin-left", "10px");
+      $(this).css("margin-right", "10px");
+
+    },
+    function(){
+      $(this).css("height", "100px");
+      $(this).css("width", "100px");
+      $(this).css("margin-left", "0px");
+      $(this).css("margin-right", "0px");
+    });
+});
+
+
 </script>
