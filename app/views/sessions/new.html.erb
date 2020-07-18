@@ -9,7 +9,7 @@
       <%= f.email_field :email, class: 'form-control' %>
 
       <%= f.label :Password %>
-      <%= link_to "(forgot password)", new_password_reset_path %>
+      <%= link_to "(forgot password)", password_reset_user_path %>
       <%= f.password_field :password, class: 'form-control' %>
 
       <%= f.label :remember_me, class: "checkbox inline" do %>
@@ -24,19 +24,3 @@
     <%= link_to "Sign up now!", signup_path %>
   </div>
 </div>
-
-
-<!--<form class="login-form">
-  <p class="login-text">
-    <span class="fa-stack fa-lg">
-      <i class="fa fa-circle fa-stack-2x"></i>
-      <i class="fa fa-lock fa-stack-1x"></i>
-    </span>
-  </p>
-  <input type="email" class="login-username" autofocus="true" required="true" placeholder="Email" />
-  <input type="password" class="login-password" required="true" placeholder="Password" />
-  <input type="submit" name="Login" value="Login" class="login-submit" />
-</form>
-<a href="#" class="login-forgot-pass">forgot password?</a>
-<div class="underlay-photo"></div>
-<div class="underlay-black"></div>-->
