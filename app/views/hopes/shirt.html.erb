@@ -1,5 +1,5 @@
 <% provide(:title, 'Suit') %>
-<div class="container">
+<div class="container fadein">
   <p class="center">ここでは手持ちのスーツとネクタイに合うようにシャツを提案します。<br>お手持ちのスーツに当てはまるものを選んでください</p>
     <div class="contents2">
       <div class="suit_pic">
@@ -93,5 +93,15 @@ $(function(){
     });
 });
 
+$(window).scroll(function (){
+    $('.fadein').each(function(){
+        var elemPos = $(this).offset().top,
+            scroll = $(window).scrollTop(),
+            windowHeight = $(window).height();
+          if (scroll > elemPos - windowHeight + 100){
+              $(this).addClass('scrollin');
+            }
+        });
+    });
 
 </script>
