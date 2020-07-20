@@ -1,5 +1,5 @@
 class ResultsController < ApplicationController
-  def resuit_suit
+  def result_suit
   end
 
   def result_shirt

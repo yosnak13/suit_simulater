@@ -1,8 +1,8 @@
 require 'test_helper'
 
 class ResultsControllerTest < ActionDispatch::IntegrationTest
-  test "should get resuit_suit" do
-    get results_resuit_suit_url
+  test "should get result_suit" do
+    get results_result_suit_url
     assert_response :success
   end
 
