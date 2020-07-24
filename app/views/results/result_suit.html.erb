@@ -1,16 +1,31 @@
+<div class="recomend">
+  <h2>おすすめのスーツ</h2>
+  <p>無地のスーツ</p>
+</div>
 <div class="wrapper">
-  <div class="column cat1">
-    <div class="info">
-      <h2>アラン</h2>
-      <p>(ローラン)</p>
-      <a href="#">プロフィール</a>
-    </div>
+  <div>
+    <%= image_tag "home.jpeg", size: "500x500", alt:"茶系スーツ" %>
   </div>
-  <div class="column cat2">
-    <div class="info">
-      <h2>アステア</h2>
-      <p>(ラダトーム)</p>
-      <a href="#">プロフィール</a>
-    </div>
+  <div class="suit_result">
+    <p>ジャケット、ネクタイ、シャツの柄の総数は1~1.5個がちょうどいいと言われています（柄ありを1、柄なしを0、素材と模様が同系色なら0.5とした場合）。無地のスーツなら、ネクタイかシャツどちらかに柄ありを使うことでバランスがよく清潔感のあるコーデに仕上げることができます。</p>
   </div>
 </div>
+
+<div class="recomend">
+  <h2>上記のスーツにはこんなネクタイとシャツが似合うでしょう</h2>
+</div>
+
+<div class="wrapper">
+  <div class="info">
+    <h2>シャツ</h2>
+    <p>無地のシャツ</p>
+    <%= image_tag "home.jpeg", size: "380x380", alt:"茶系スーツ", class:'suit_result' %>
+  </div>
+  <div class="info">
+    <h2>ネクタイ</h2>
+    <p>ストライプのネクタイ</p>
+    <%= image_tag "home.jpeg", size: "380x380", alt:"茶系スーツ", class:'suit_result'%>
+  </div>
+</div>
+
+<btn class="btn">この検索結果を保存する</btn>
