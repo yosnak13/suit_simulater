@@ -1,8 +1,8 @@
 <div class="recomend">
-  <h2>おすすめのスーツ</h2>
+  <h2>あなたにおすすめのスーツ</h2>
   <p>無地のスーツ</p>
 </div>
-<div class="wrapper">
+<div class="main_item">
   <div>
     <%= image_tag "home.jpeg", size: "500x500", alt:"茶系スーツ" %>
   </div>
@@ -12,23 +12,27 @@
 </div>
 
 <div class="recomend">
-  <h2>上記のスーツにはこんなネクタイとシャツが似合うでしょう</h2>
+  <h3>上記のスーツにはこんなネクタイとシャツが似合うでしょう</h3>
 </div>
 
-<div class="wrapper">
-  <div class="info">
+<div class="sub_items">
+  <div class="item_info">
     <h2>シャツ</h2>
     <p>無地のシャツ</p>
-    <%= image_tag "home.jpeg", size: "380x380", alt:"茶系スーツ", class:'suit_result' %>
+    <%= image_tag "home.jpeg", size: "380x380", alt:"ネクタイ" %>
   </div>
-  <div class="info">
+  <div class="item_info">
     <h2>ネクタイ</h2>
     <p>ストライプのネクタイ</p>
-    <%= image_tag "home.jpeg", size: "380x380", alt:"茶系スーツ", class:'suit_result'%>
+    <%= image_tag "tie.jpeg", size: "380x380", alt:"スーツ" %>
   </div>
 </div>
 
 <div class="recomend">
-  <btn class="btn ">この検索結果を保存する</btn>
+  <btn class="btn">この検索結果を保存する</btn>
   <!- flashで保存を通知できるようにしたい -->
+</div>
+
+<div class="recomend">
+  <%= link_to "TOPページへ戻る", root_path %>
 </div>

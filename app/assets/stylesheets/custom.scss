@@ -281,13 +281,21 @@ input {
 }
 
 /* result */
-.wrapper {
+.main_item {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  padding: 10px;
 }
+
+.sub_items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+
 .suit_result {
-  height: 500px;
+  height: auto;
   align-items: center;
   width: 500px;
   margin: 10px;
@@ -295,10 +303,17 @@ input {
     font-size: 15px;
   }
 }
+.item_info {
+  margin: 10px;
+
+}
+
 
 .recomend {
   text-align: center;
+  margin: 20px 0;
 }
+
 /* responsive */
 @media all and (min-width: 600px) {
   // .wrapper {
