@@ -6,7 +6,7 @@
     <%= form_for(:session, url: login_path) do |f| %>
 
       <%= f.label :Email %>
-      <%= f.email_field :email, class: 'form-control' %>
+      <%= f.email_field :email %>
 
       <%= f.label :Password %>
       <%= link_to "(forgot password)", password_reset_user_path(:id) %>

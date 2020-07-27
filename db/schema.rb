@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20200717034956) do
     t.datetime "updated_at", null: false
     t.string "password_digest"
     t.string "gender"
-    t.integer "age"
+    t.string "age"
     t.string "remember_digest"
     t.string "activation_digest"
     t.boolean "activated", default: false

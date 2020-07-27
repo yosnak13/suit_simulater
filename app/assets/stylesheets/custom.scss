@@ -202,8 +202,8 @@ header {
   margin: 20px;
   justify-content: space-around;
 }
-/* shirt page*/
 
+/* shirt page*/
 .center {
   text-align: center;
 }
@@ -211,6 +211,7 @@ header {
 .space {
   margin: 30px;
 }
+
 /* footer */
 
 footer {
@@ -267,7 +268,7 @@ input {
   margin-left: 0;
 }
 
-
+/* fadein機能のcss */
 .fadein {
   opacity: 0;
   transform : translate(0, 50px);
@@ -277,4 +278,45 @@ input {
 .fadein.scrollin{
   opacity: 1;
   transform: translate(0, 0);
+}
+
+/* result */
+.main_item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sub_items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+
+.suit_result {
+  height: auto;
+  align-items: center;
+  width: 500px;
+  margin: 10px;
+  p {
+    font-size: 15px;
+  }
+}
+.item_info {
+  margin: 10px;
+
+}
+
+
+.recomend {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* responsive */
+@media all and (min-width: 600px) {
+  // .wrapper {
+  //   display: flex;
+  // }
 }
