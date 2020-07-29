@@ -1,3 +1,121 @@
-// Place all the styles related to the StaticPages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/* universal */
+body {
+   margin: 0;
+   padding-top: 80px;
+   font-family:'Noto Sans JP', 'Roboto', sans-serif;
+   background-color: #e6e6e6;
+   object-fit: cover;
+}
+h1 {
+  font-size: 30px;
+}
+
+/* header */
+.btn-outline-primary {
+    color: #007bff;
+    border-color: #007bff;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+* {
+   box-sizing: border-box;
+}
+
+
+header {
+    width: 100%;
+    padding: 30px 4% 10px;
+    background-color: rgba(255, 255, 255, 0.87);
+    position: fixed; //ヘッダーの固定
+    top: 0;
+    display: flex;
+    align-items: center;
+    h1 {
+      font-size: 20px;
+      margin: 0;
+      padding: 0;
+    }  a {
+    text-decoration: none;
+    color: #4b4b4b;
+    }  ul {
+   list-style: none;
+   margin: 0;
+   display: flex;
+  } li {
+   margin: 0 0 0 15px;
+   font-size: 14px;
+  } nav {
+    // navタグを両端配置
+    margin: 0 0 0 auto;
+  }
+}
+
+
+/*home-page*/
+.contents {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.contents2 {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-around;
+}
+
+.discription {
+  flex-basis: 40%;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-section {
+  margin: 50px;
+  border-top: 1px gray solid;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.items {
+  margin: 20px;
+  text-align: center;
+}
+
+.select {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.img-circle {
+  margin: 15px;
+  object-fit: cover;
+}
+
+/* footer */
+footer {
+  background-color: rgba(255, 255, 255, 0.87);
+  padding: 50px 0 50px 0;
+  color: #777;
+  width: 100%;
+  small {
+    float: left;
+    margin: 0 0 0 15px;
+  }
+}
+
+/* fadein機能のcss */
+.fadein {
+  opacity: 0;
+  transform : translate(0, 50px);
+  transition : all 1500ms;
+}
+
+.fadein.scrollin{
+  opacity: 1;
+  transform: translate(0, 0);
+}

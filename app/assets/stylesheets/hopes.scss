@@ -1,3 +1,96 @@
-// Place all the styles related to the Hopes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/* suit page*/
+.bg_test-text {
+    display:  inline-block;                         /* インラインブロックにする */
+    padding: 10px 20px;                             /* 余白指定 */
+    // background-color: rgba(255, 255, 255, 0.7);     /* 背景色指定 */
+    color: #fff;
+
+}
+.bg_test {
+    text-align:  center;    /* 文字中央寄せ */
+    padding:  300px;        /* 余白指定 */
+    // border: solid 2px;      /* 枠線指定 */
+    background-image: url(/assets/WP.jpeg);    /* 背景画像指定 */
+    background-size: cover;
+}
+
+/* hopes box  */
+.suit_pic {
+  flex-basis: 40%;
+  margin: auto;
+}
+
+.main-box {
+  align-items: center;
+  background   : #fff;
+  border-radius: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  height       : 380px;
+  margin       : auto;
+  width        : 380px;
+}
+
+.sub-box {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.pattern {
+  width        : 100px;
+  height       : 100px;
+  background   : #000;
+  border: #fff solid 1px;
+  border-radius: 10%;
+}
+.pattern-navy{
+  background   : #000044;
+  border: #fff solid 1px;
+  border-radius: 10%;
+  height       : 100px;
+  // margin       : auto;
+  padding      : 0px;
+  width        : 100px;
+}
+
+.pattern-gray{
+  background   : #a6a6a6;
+  border: #fff solid 1px;
+  border-radius: 10%;
+  height       : 100px;
+  // margin       : auto;
+  width        : 100px;
+}
+.pattern-darkgray{
+  background   : #3c3c3c;
+  border: #fff solid 1px;
+  border-radius: 10%;
+  height       : 100px;
+  // margin       : auto;
+  width        : 100px;
+}
+.pattern-brown{
+  background   : #663300;
+  border: #fff solid 1px;
+  border-radius: 10%;
+  height       : 100px;
+  // margin       : auto;
+  width        : 100px;
+}
+
+.btn_to_final {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  justify-content: space-around;
+}
+
+/* shirt page*/
+.center {
+  text-align: center;
+}
+
+.space {
+  margin: 30px;
+}
