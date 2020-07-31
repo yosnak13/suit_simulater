@@ -1,45 +1,47 @@
-<div class="container">
-  <p>あなたが着てみたいスーツの色をボックスの中から選択してください</p>
-  <div class="contents2">
-    <div class="suit_pic">
-      <div>
-        <%= image_tag "home.jpeg", size: "380x380", alt:"茶系スーツ", class:"xxx section" %>
-        <%= image_tag "WP.jpeg", size: "380x380", alt:"茶系スーツ", class:"yyy section" %>
-        <%= image_tag "tie.jpeg", size: "380x380", alt:"茶系スーツ", class:"zzz section" %>
+<div class="hopes">
+  <div class="container">
+    <p>あなたが着てみたいスーツの色をボックスの中から選択してください</p>
+    <div class="contents2">
+      <div class="suit_pic">
+        <div>
+          <%= image_tag "home.jpeg", size: "380x380", alt:"茶系スーツ", class:"xxx section" %>
+          <%= image_tag "WP.jpeg", size: "380x380", alt:"茶系スーツ", class:"yyy section" %>
+          <%= image_tag "tie.jpeg", size: "380x380", alt:"茶系スーツ", class:"zzz section" %>
+        </div>
+      </div>
+
+      <div class="main-box">
+        <div class="sub-box">
+          <p>ネイビー</p>
+            <div class="pattern-navy secList" id="xxx">
+            </div>
+        </div>
+        <div class="sub-box">
+          <p>グレー</p>
+            <div class="pattern-gray secList" id="yyy">
+            </div>
+        </div>
+        <div class="sub-box">
+          <p>ダークグレー</p>
+            <div class="pattern-darkgray secList" id="zzz">
+            </div>
+        </div>
+        <div class="sub-box">
+          <p>ブラック</p>
+            <div class="pattern secList">
+            </div>
+        </div>
+        <div class="sub-box">
+          <p>茶</p>
+            <div class="pattern-brown secList">
+            </div>
+        </div>
       </div>
     </div>
 
-    <div class="main-box">
-      <div class="sub-box">
-        <p>ネイビー</p>
-          <div class="pattern-navy secList" id="xxx">
-          </div>
-      </div>
-      <div class="sub-box">
-        <p>グレー</p>
-          <div class="pattern-gray secList" id="yyy">
-          </div>
-      </div>
-      <div class="sub-box">
-        <p>ダークグレー</p>
-          <div class="pattern-darkgray secList" id="zzz">
-          </div>
-      </div>
-      <div class="sub-box">
-        <p>ブラック</p>
-          <div class="pattern secList">
-          </div>
-      </div>
-      <div class="sub-box">
-        <p>茶</p>
-          <div class="pattern-brown secList">
-          </div>
-      </div>
+    <div class="btn_to_final">
+      <%= link_to "これで決定！", result_suit_path, class:'btn btn-lg btn-outline-primary'%>
     </div>
-  </div>
-
-  <div class="btn_to_final">
-    <%= link_to "これで決定！", result_suit_path, class:'btn btn-lg btn-outline-primary'%>
   </div>
 </div>
 
