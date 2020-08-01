@@ -1,15 +1,9 @@
 <% provide(:title, 'Suit') %>
 <div class="hopes">
-    <div class="bg_test">
-        <div class="bg_test-text">
-            <h2>スーツの色を指定して探す(それに合うネクタイとシャツも提案します)</h2>
-            <h1><%= link_to "→こちら" , select_suit_path, class:'bg_test-text' %><h1>
-        </div>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container text-center">
+      <h2>スーツの色を指定して探す(それに合うネクタイとシャツも提案します)</h2>
+      <h1><%= link_to "→こちら", select_suit_path %><h1>
     </div>
-    <div class="bg_test">
-        <div class="bg_test-text">
-            <h2>手持ちのシャツとネクタイに合うスーツを探す</h2>
-            <h1><%= link_to "→こちら" , "#", class:'bg_test-text' %><h1>
-        </div>
-    </div>
+  </div>    
 </div>

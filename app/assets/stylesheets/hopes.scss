@@ -14,6 +14,13 @@
       background-image: url(/assets/WP.jpeg);    /* 背景画像指定 */
       background-size: cover;
   }
+  .jumbotron {
+    background-image: url(/assets/WP.jpeg);    /* 背景画像指定 */
+    background-size: cover;
+    background-position: center;
+    padding: 300px;
+    color: white;
+  }
 
   /* hopes box  */
   .suit_pic {

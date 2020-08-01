@@ -53,46 +53,46 @@ header {
 
 
 /*home-page*/
-.contents {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-.contents2 {
-  display: flex;
-  flex-wrap: wrap-reverse;
-  justify-content: space-around;
-}
+// .contents {
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: space-around;
+// }
+// .contents2 {
+//   display: flex;
+//   flex-wrap: wrap-reverse;
+//   justify-content: space-around;
+// }
 
-.discription {
-  flex-basis: 40%;
-  margin-top: 100px;
-  margin-left: auto;
-  margin-right: auto;
-}
+// .discription {
+//   flex-basis: 40%;
+//   margin-top: 100px;
+//   margin-left: auto;
+//   margin-right: auto;
+// }
 
-.search-section {
-  margin: 50px;
-  border-top: 1px gray solid;
-  padding-top: 50px;
-  text-align: center;
-}
+// .search-section {
+//   margin: 50px;
+//   border-top: 1px gray solid;
+//   padding-top: 50px;
+//   text-align: center;
+// }
 
-.items {
-  margin: 20px;
-  text-align: center;
-}
+// .items {
+//   margin: 20px;
+//   text-align: center;
+// }
 
-.select {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
+// .select {
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: space-around;
+// }
 
-.img-circle {
-  margin: 15px;
-  object-fit: cover;
-}
+// .img-circle {
+//   margin: 15px;
+//   object-fit: cover;
+// }
 
 /* footer */
 footer {

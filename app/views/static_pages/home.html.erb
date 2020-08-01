@@ -1,5 +1,58 @@
 <% provide(:title, "Home") %>
-<div class="contents fadein">
+<div class="container text-center">
+<div class="row fadein">
+  <div class="col-md-6">
+    <h1>あなたにスーツを提案</h1>
+    <p>Suit simulaterはあなたに似合うスーツをバーチャル世界で提案するアプリです。スーツの合わせ方が難しいと思う方、なにかギフトをあげたいがどんな柄を選べば良いかわからない方に一役買います</p>
+  </div>
+  <%= image_tag "home.jpeg", size: "500x500", alt:"茶系スーツ", class:"col-md-6 img-circle" %>
+</div>
+
+  <div class="row contents2 fadein">
+    <%= image_tag "jkt.jpeg", size: "500x500", alt:"ジャケット画像2", class:"col-md-6 img-circle" %>
+    <div class="col-md-6 discription">
+      <h1>新しくスーツを仕立てたい時のイメージ作りができます</h1>
+      <p>新しいスーツが欲しいのに、どんな色や柄がふさわしいかわからない。そんな時にこのサイトでイメージ作りにシミュレートできます</p>
+    </div>
+  </div>
+
+<div class="search-section">
+  <h1>手持ちのスーツから似合うシャツやネクタイを探すなど、手持ちのアイテムから似合うスーツを作ることも可能です</h1>
+</div>
+
+
+  <div class="row fadein">
+    <div class="col-md-4 items">
+      <a href="#" class="btn btn-lg btn-outline-primary" suit_path >スーツを探す</a>
+      <br>
+      <%= image_tag "WP.jpeg", size: "300x300", alt:"スーツサンプル画像", class:"img-circle" %>
+    </div>
+    <div class="col-md-4 items">
+      <a href="#" class="btn btn-lg btn-outline-primary">シャツを探す</a>
+      <br>
+        <%= image_tag "kitten.jpeg", size: "300x300", alt:"シャツサンプル画像", class:"img-circle" %>
+    </div>
+    <div class="col-md-4 items">
+      <a href="#" class="btn btn-lg btn-outline-primary">ネクタイを探す</a>
+      <br>
+        <%= image_tag "tie.jpeg", size: "300x300", alt:"ネクタイサンプル画像", class:"img-circle" %>
+    </div>
+  </div>
+</div>
+  <script>
+  $(window).scroll(function (){
+    $('.fadein').each(function(){
+        var elemPos = $(this).offset().top,
+            scroll = $(window).scrollTop(),
+            windowHeight = $(window).height();
+          if (scroll > elemPos - windowHeight + 100){
+              $(this).addClass('scrollin');
+            }
+        });
+    });
+  </script>
+
+<!--<div class="contents fadein">
   <div class="discription">
     <h1>あなたにスーツを提案</h1>
     <p>Suit simulaterはあなたに似合うスーツをバーチャル世界で提案するアプリです。スーツの合わせ方が難しいと思う方、なにかギフトをあげたいがどんな柄を選べば良いかわからない方に一役買います</p>
@@ -38,17 +91,4 @@
       <br>
         <%= image_tag "tie.jpeg", size: "300x300", alt:"ネクタイサンプル画像", class:"img-circle" %>
     </div>
-  </div>
-
-  <script>
-  $(window).scroll(function (){
-    $('.fadein').each(function(){
-        var elemPos = $(this).offset().top,
-            scroll = $(window).scrollTop(),
-            windowHeight = $(window).height();
-          if (scroll > elemPos - windowHeight + 100){
-              $(this).addClass('scrollin');
-            }
-        });
-    });
-  </script>
+  </div>-->
