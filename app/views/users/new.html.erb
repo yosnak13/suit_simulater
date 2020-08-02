@@ -1,29 +1,31 @@
 <% provide(:title, 'Sign up') %>
-<div class="row">
-  <div class="col-md-4 col-md-offset-4">
-  <h1>アカウント作成</h1>
-    <%= form_for(@user) do |f| %>
-      <%= render 'shared/error_messages' %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+    <h1>アカウント作成</h1>
+      <%= form_for(@user) do |f| %>
+        <%= render 'shared/error_messages' %>
 
-      <%= f.label :Name %>
-      <%= f.text_field :name, class: 'form-control' %>
+        <%= f.label :Name %>
+        <%= f.text_field :name, class: 'form-control' %>
 
-      <%= f.label :Email %>
-      <%= f.email_field :email, class: 'form-control' %>
+        <%= f.label :Email %>
+        <%= f.email_field :email, class: 'form-control' %>
 
-      <%= f.label :Age %>
-      <%= f.select :age, [["10~20代","10~20代"],["30代","30代"],["40代","40代"],["50代","50代"],["60代以上","60代以上"]], {prompt:"選択してください"}, {class: 'form-control'} %>
+        <%= f.label :Age %>
+        <%= f.select :age, [["10~20代","10~20代"],["30代","30代"],["40代","40代"],["50代","50代"],["60代以上","60代以上"]], {prompt:"選択してください"}, {class: 'form-control'} %>
 
-      <%= f.label :Gender %>
-      <%= f.select :gender, [["男性","男性"],["女性","女性"],["その他","その他"]], {prompt:"選択してください"}, {class: 'form-control'} %>
+        <%= f.label :Gender %>
+        <%= f.select :gender, [["男性","男性"],["女性","女性"],["その他","その他"]], {prompt:"選択してください"}, {class: 'form-control'} %>
 
-      <%= f.label :Password %>
-      <%= f.password_field :password, class: 'form-control' %>
+        <%= f.label :Password %>
+        <%= f.password_field :password, class: 'form-control' %>
 
-      <%= f.label :password_confirmation, "Password（confirm）" %>
-      <%= f.password_field :password_confirmation, class: 'form-control' %>
+        <%= f.label :password_confirmation, "Password（confirm）" %>
+        <%= f.password_field :password_confirmation, class: 'form-control' %>
 
-      <%= f.submit "アカウント作成", class: "btn btn-primary" %>
-    <% end %>
+        <%= f.submit "アカウント作成", class: "btn btn-primary" %>
+      <% end %>
+    </div>
   </div>
 </div>
