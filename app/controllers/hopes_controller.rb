@@ -20,4 +20,7 @@ class HopesController < ApplicationController
 
   def tie_select
   end
+
+  def post
+  end
 end
