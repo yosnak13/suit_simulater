@@ -1,0 +1,2 @@
+class HopeSuit < ApplicationRecord
+end

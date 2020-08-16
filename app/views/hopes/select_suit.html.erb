@@ -48,6 +48,12 @@
     </div>
   <div class="btn_to_final">
     <%= link_to "これで決定！", result_suit_path, class:'btn btn-lg btn-outline-primary'%>
+        <%= form_for(@xxx, url: result_suit_path) do |f| %>
+
+          <%= f.hidden_field :suit_color, class: 'form-control' %> #js
+
+          <%= f.submit "これで決定！", class: "btn btn-primary" %> #コントローラーで渡すように書き換え
+        <% end %>
   </div>
 </div>
 

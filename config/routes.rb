@@ -20,15 +20,6 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
 
-  #アイテム検索用ルーティング
-
-
-  # resources :hopes, only: [:suit, :shirt, :tie] do
-  #   collection do
-  #     get :suit
-  #   end
-  # end
-
   #結果ページ
   get '/result_suit', to: 'results#result_suit'
   get '/result_shirt', to: 'results#result_shirt'

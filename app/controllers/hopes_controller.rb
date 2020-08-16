@@ -1,9 +1,6 @@
 class HopesController < ApplicationController
-  def index
-    @partial_css_disabled = true
-  end
-
   def suit
+
   end
 
   def shirt
@@ -13,11 +10,21 @@ class HopesController < ApplicationController
   end
 
   def select_suit
+    @xxx = HopeSuit.new
   end
 
   def shirt_select
   end
 
   def tie_select
+  end
+
+  def create
+    @hope_suit = HopeSuit.new(xxx)
+    if @hope_suit.save
+      redirect_to result_suit_url
+    else
+      render 'new'
+    end
   end
 end
