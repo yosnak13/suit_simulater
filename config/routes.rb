@@ -9,6 +9,9 @@ Rails.application.routes.draw do
     member do
       get '/password_reset', to: 'password_resets#new'
       post '/password_reset', to: 'password_resets#create'
+      get '/suit', to: 'hopes#suit'
+      get '/shirt', to: 'hopes#shirt'
+      get '/tie', to: 'hopes#tie'
     end
   end
 
@@ -18,9 +21,13 @@ Rails.application.routes.draw do
   delete '/logout',  to: 'sessions#destroy'
 
   #アイテム検索用ルーティング
-  get '/suit', to: 'hopes#suit'
-  get '/shirt', to: 'hopes#shirt'
-  get '/tie', to: 'hopes#tie'
+
+
+  # resources :hopes, only: [:suit, :shirt, :tie] do
+  #   collection do
+  #     get :suit
+  #   end
+  # end
 
   #結果ページ
   get '/result_suit', to: 'results#result_suit'
