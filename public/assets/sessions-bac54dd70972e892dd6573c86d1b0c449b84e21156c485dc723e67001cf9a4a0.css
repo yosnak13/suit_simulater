@@ -1,0 +1,6 @@
+/* line 1, /Users/yoshi/environment/suit_simulater/app/assets/stylesheets/sessions.scss */
+.new {
+  background-image: url(/assets/office.jpg);
+  background-size: cover;
+  padding-bottom: 180px;
+}
