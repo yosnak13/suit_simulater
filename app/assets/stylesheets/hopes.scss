@@ -88,7 +88,11 @@
     repeating-linear-gradient( 0deg, #fff 0px 1px, transparent 1px 10px),
     repeating-linear-gradient( 90deg, #fff 0px 1px, transparent 1px 10px);
   }
-
+  .wrap-reverse {
+    // display: flex;
+    // justify-content: center;
+    // flex-wrap: wrap-reverse;
+  }
   .btn_to_final {
     display: flex;
     flex-wrap: wrap;
