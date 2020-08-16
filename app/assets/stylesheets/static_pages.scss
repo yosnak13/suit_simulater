@@ -2,7 +2,6 @@
   .suit_img {
     background-image: image-url('main.jpg');
     background-size: cover;
-    color: white;
     padding: 200px;
     margin-bottom: -10px;
   }
@@ -11,6 +10,9 @@
     background-size: cover;
     color: white;
     padding: 200px;
+  }
+  .items {
+    margin: 10px 0;
   }
   .img-circle {
     margin: 10px;

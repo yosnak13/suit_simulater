@@ -14,7 +14,10 @@
   .suit_pic {
     margin: auto;
   }
-
+ .size {
+   width: auto;
+   height: 380px;
+ }
   .main-box {
     align-items: center;
     background   : #fff;
@@ -58,15 +61,15 @@
     // margin       : auto;
     width        : 100px;
   }
-  .pattern-darkgray{
-    background   : #3c3c3c;
+  .pattern-beige{
+    background   : #663300;
     border: #fff solid 1px;
     border-radius: 10%;
     height       : 100px;
     // margin       : auto;
     width        : 100px;
   }
-  .pattern-brown{
+  .pattern-windowpain {
     background   : #663300;
     border: #fff solid 1px;
     border-radius: 10%;
