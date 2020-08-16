@@ -1,13 +1,13 @@
 .static_pages {
   .suit_img {
-    background-image: url(/assets/home.jpeg);
+    background-image: image-url('main.jpg');
     background-size: cover;
     color: white;
     padding: 200px;
     margin-bottom: -10px;
   }
   .jkt_img {
-    background-image: url(/assets/jkt.jpeg);
+    background-image: image-url('main2.jpg');
     background-size: cover;
     color: white;
     padding: 200px;
