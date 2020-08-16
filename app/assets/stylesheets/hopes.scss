@@ -48,7 +48,6 @@
     border: #fff solid 1px;
     border-radius: 10%;
     height       : 100px;
-    // margin       : auto;
     padding      : 0px;
     width        : 100px;
   }
@@ -58,7 +57,6 @@
     border: #fff solid 1px;
     border-radius: 10%;
     height       : 100px;
-    // margin       : auto;
     width        : 100px;
   }
   .pattern-beige{
@@ -66,16 +64,29 @@
     border: #fff solid 1px;
     border-radius: 10%;
     height       : 100px;
-    // margin       : auto;
     width        : 100px;
   }
-  .pattern-windowpain {
-    background   : #663300;
+  .pattern-check {
+    background   : brown;
     border: #fff solid 1px;
     border-radius: 10%;
     height       : 100px;
-    // margin       : auto;
     width        : 100px;
+    background-color: #dddddd;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, transparent), color-stop(.5, #ffffff), to(#ffffff)),
+    -webkit-gradient(linear, 0 0, 100% 0, color-stop(.5, transparent), color-stop(.5, #ffffff), to(#ffffff));
+    -webkit-background-size: 10px 10px;
+  }
+  .pattern-wp {
+    background   : blue;
+    border: #fff solid 1px;
+    border-radius: 10%;
+    height       : 100px;
+    width        : 100px;
+    background-color : #1A237E;
+    background-image:
+    repeating-linear-gradient( 0deg, #fff 0px 1px, transparent 1px 10px),
+    repeating-linear-gradient( 90deg, #fff 0px 1px, transparent 1px 10px);
   }
 
   .btn_to_final {
