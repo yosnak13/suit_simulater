@@ -30,17 +30,17 @@
     <div class="container">
       <div class="row fadein">
         <div class="col-md-4 items">
-          <a href="#" class="btn btn-lg btn-outline-primary" suit_path >スーツを探す</a>
+          <%= link_to "スーツを探す", suit_path, class:"btn btn-lg btn-outline-primary" %>
           <br>
-          <%= image_tag "suit.jpg", size: "300x300", alt:"スーツ画像" %>
+          <%= image_tag "suit.jpg", size: "300x300", alt:"スーツ画像", class:"img-circle" %>
         </div>
         <div class="col-md-4 items">
-          <a href="#" class="btn btn-lg btn-outline-primary">シャツを探す</a>
+          <%= link_to "シャツを探す", shirt_path, class:"btn btn-lg btn-outline-primary" %>
           <br>
             <%= image_tag "kitten.jpeg", size: "300x300", alt:"シャツ画像", class:"img-circle" %>
         </div>
         <div class="col-md-4 items">
-          <a href="#" class="btn btn-lg btn-outline-primary">ネクタイを探す</a>
+          <%= link_to "ネクタイを探す", tie_path, class:"btn btn-lg btn-outline-primary" %>
           <br>
             <%= image_tag "tie.jpg", size: "300x300", alt:"ネクタイ画像", class:"img-circle" %>
         </div>
