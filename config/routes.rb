@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     member do
       get '/password_reset', to: 'password_resets#new'
       post '/password_reset', to: 'password_resets#create'
+      get '/select_suit', to: 'hopes#select_suit'
       get '/suit', to: 'hopes#suit'
       get '/shirt', to: 'hopes#shirt'
       get '/tie', to: 'hopes#tie'
@@ -23,5 +24,5 @@ Rails.application.routes.draw do
   get '/result_shirt', to: 'results#result_shirt'
   get '/result_tie', to: 'results#result_tie'
 
-  get '/select_suit', to: 'hopes#select_suit'
+
 end
