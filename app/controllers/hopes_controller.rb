@@ -1,6 +1,5 @@
 class HopesController < ApplicationController
   def suit
-
   end
 
   def shirt

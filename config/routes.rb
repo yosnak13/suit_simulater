@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   get '/signup', to:'users#new'
   get 'sessions/new'
 
-
   resources :users do
     member do
       get '/password_reset', to: 'password_resets#new'
@@ -14,7 +13,6 @@ Rails.application.routes.draw do
       get '/tie', to: 'hopes#tie'
     end
   end
-
 
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
