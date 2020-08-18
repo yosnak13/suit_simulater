@@ -14,7 +14,7 @@
           <div class="main-box">
             <div class="sub-box">
               <p>ネイビー</p>
-                <div class="pattern-navy secList" id="navy">
+                <div class="pattern-navy secList" id="navy" value="ネイビー">
                 </div>
             </div>
             <div class="sub-box">
@@ -47,25 +47,21 @@
       </div>
     </div>
   <div class="btn_to_final">
-    <%= link_to "これで決定！", result_suit_path, class:'btn btn-lg btn-outline-primary'%>
-        <%= form_for(@xxx, url: result_suit_path) do |f| %>
-
-          <%= f.hidden_field :suit_color, class: 'form-control' %> #js
-
-          <%= f.submit "これで決定！", class: "btn btn-primary" %> #コントローラーで渡すように書き換え
-        <% end %>
+    <%= form_for(@xxx, url: result_suit_path) do |f| %>
+      <%= f.hidden_field :suit_color, class: 'form-control' %> #jsで要素を渡すようにする
+      <%= f.submit "これで決定！", class: "btn btn-primary" %> #コントローラーで渡すように書き換え
+    <% end %>
   </div>
 </div>
 
 <script>
 $(function(){
   $(".section").hide();
-  $(".secList").on("click",function(){
+  $(".secList").on("click", function(){
     // クリックした要素の ID と違うクラス名のセクションを非表示
     $(".section").not($("."+$(this).attr("id"))).hide();
     // クリックした要素の ID と同じクラスのセクションを表示
     $("."+$(this).attr("id")).fadeIn(500);
-
   });
 });
 
@@ -75,7 +71,6 @@ $(function(){
       $(this).css("width", "80px");
       $(this).css("margin-left", "10px");
       $(this).css("margin-right", "10px");
-
     },
     function(){
       $(this).css("height", "100px");
@@ -83,6 +78,10 @@ $(function(){
       $(this).css("margin-left", "0px");
       $(this).css("margin-right", "0px");
     });
+});
+
+$(".secList").on("click", function(){
+  var click = $(this).date('id');
 });
 
 
