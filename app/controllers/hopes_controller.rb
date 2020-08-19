@@ -24,7 +24,7 @@ class HopesController < ApplicationController
     if @hope_suit.save
       redirect_to result_suit_url
     else
-      render 'new'
+      render 'new' #多分newアクションはないよね
     end
   end
 end

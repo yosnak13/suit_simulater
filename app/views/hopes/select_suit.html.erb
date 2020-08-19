@@ -11,34 +11,35 @@
           <%= image_tag "windowp1.jpg", alt:"ウィンドウペン", class:"wp section size" %>
         </div>
         <div class="col-md-6">
-          <div class="main-box">
-            <div class="sub-box">
-              <p>ネイビー</p>
+          <%= form_for(@xxx, url: result_suit_path) do |f| %>
+            <div class="main-box">
+              <div class="sub-box">
+                <%= f.label :ネイビー %>
                 <div class="pattern-navy secList" id="navy" date-color="ネイビー">
                 </div>
-            </div>
-            <div class="sub-box">
-              <p>グレー</p>
+              </div>
+              <div class="sub-box">
+                <%= f.label :グレー %>
                 <div class="pattern-gray secList" id="gray">
                 </div>
-            </div>
-            <div class="sub-box">
-              <p>ブラック</p>
+              </div>
+              <div class="sub-box">
+                <%= f.label :ブラック %>
                 <div class="pattern secList" id="black">
                 </div>
-            </div>
-            <div class="sub-box">
-              <p>ベージュ</p>
+              </div>
+              <div class="sub-box">
+                <%= f.label :ベージュ %>
                 <div class="pattern-beige secList" id="beige">
                 </div>
-            </div>
-            <div class="sub-box">
-              <p>チェック柄</p>
+              </div>
+              <div class="sub-box">
+                <%= f.label :チェック %>
                 <div class="pattern-check secList" id="check">
                 </div>
-            </div>
-            <div class="sub-box">
-              <p>ウィンドウペン</p>
+              </div>
+              <div class="sub-box">
+                <%= f.label :ウィンドウペン %>
                 <div class="pattern-wp secList" id="wp">
                 </div>
             </div>
@@ -46,10 +47,9 @@
         </div>
       </div>
     </div>
-  <div class="btn_to_final">
-    <%= form_for(@xxx, url: result_suit_path) do |f| %>
+    <div class="btn_to_final">
       <%= f.hidden_field :suit_color, value:"" ,class: 'form-control' %> #jsで要素を渡すようにする
       <%= f.submit "これで決定！", class: "btn btn-primary" %> #コントローラーで渡すように書き換え
-    <% end %>
-  </div>
+      <% end %>
+    </div>
 </div>
