@@ -11,11 +11,11 @@
           <%= image_tag "windowp1.jpg", alt:"ウィンドウペン", class:"wp section size" %>
         </div>
         <div class="col-md-6">
-          <%= form_for(@xxx, url: result_suit_path) do |f| %>
+          <%= form_for @xxx, url: result_suit_path, html:{id:"sample"} do |f| %>
             <div class="main-box">
               <div class="sub-box">
                 <%= f.label :ネイビー %>
-                <div class="pattern-navy secList" id="navy" date-color="ネイビー">
+                <div class="pattern-navy secList" id="navy" value="ネイビー">
                 </div>
               </div>
               <div class="sub-box">
@@ -48,7 +48,7 @@
       </div>
     </div>
     <div class="btn_to_final">
-      <%= f.hidden_field :suit_color, value:"" ,class: 'form-control' %> #jsで要素を渡すようにする
+      <%= f.hidden_field :suit_color, id:"sample" ,class: 'form-control' %> #jsで要素を渡すようにする
       <%= f.submit "これで決定！", class: "btn btn-primary" %> #コントローラーで渡すように書き換え
       <% end %>
     </div>

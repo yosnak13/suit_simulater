@@ -25,5 +25,5 @@ $(function () {
 });
 
 $(".secList").on("click", function () {
-  
+  console.log(document.getElementsByClassName('secList').value);
 });
