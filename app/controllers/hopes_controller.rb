@@ -10,7 +10,7 @@ class HopesController < ApplicationController
   end
 
   def select_suit
-    @xxx = HopeSuit.new
+    @suit_color = HopeSuit.new
   end
 
   def shirt_select
@@ -20,11 +20,11 @@ class HopesController < ApplicationController
   end
 
   def create
-    @hope_suit = HopeSuit.new(xxx)
+    @hope_suit = HopeSuit.new(suit_color)
     if @hope_suit.save
       redirect_to result_suit_url
     else
-      render 'new' #多分newアクションはないよね
+      render 'new' #多分newアクションはないので後に削除
     end
   end
 end
