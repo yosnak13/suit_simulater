@@ -24,6 +24,9 @@ $(function () {
     });
 });
 
-$(".secList").on("click", function () {
-  console.log(document.getElementsByClassName('secList').value);
+//やること：JQueryで、クリックしたhtmlのvalueをinputタグに渡して送信できるようにする。
+$(function () {
+  $(".sub-box").on("click", function () {
+    document.querySelector(".sub-box");
+  });
 });
