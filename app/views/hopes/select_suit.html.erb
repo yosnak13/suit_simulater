@@ -12,32 +12,32 @@
         </div>
         <div class="col-md-6">
           <div class="main-box">
-            <div class="sub-box">
+            <div class="sub-box" value="ネイビー">
               <p>ネイビー</p>
-              <div class="pattern-navy secList" id="navy" value="ネイビー">
+              <div class="pattern-navy secList" id="navy">
               </div>
             </div>
-            <div class="sub-box">
+            <div class="sub-box" value="グレー">
               <p>グレー</p>
               <div class="pattern-gray secList" id="gray">
               </div>
             </div>
-            <div class="sub-box">
+            <div class="sub-box" value="ブラック">
               <p>ブラック</p>
               <div class="pattern secList" id="black">
               </div>
             </div>
-            <div class="sub-box">
+            <div class="sub-box" value="ベージュ">
               <p>ベージュ</p>
               <div class="pattern-beige secList" id="beige">
               </div>
             </div>
-            <div class="sub-box">
+            <div class="sub-box" value="チェック">
               <p>チェック</p>
               <div class="pattern-check secList" id="check">
               </div>
             </div>
-            <div class="sub-box">
+            <div class="sub-box" value="ウィンドウペン">
               <p>ウィンドウペン</p>
               <div class="pattern-wp secList" id="wp">
               </div>
@@ -47,9 +47,9 @@
       </div>
     </div>
   <div class="btn_to_final">
-    <%= form_for @suit_color, url: result_suit_path do |f| %>
-      <!--idを付与してjsで要素を渡すようにする-->
-      <%= f.hidden_field :suit_color, id:"sample", class: "form-control" %>
+    <%= form_for @suit_color, url: result_suit_path do |f| %><!--methodどうする？-->
+      <!--HopeSuitモデルのsuit_colorカラムに格納したい-->
+      <%= f.hidden_field :suit_color, id:"sample", value: HopeSuit.suit_color, class: "form-control" %>
       <!--対象のコントローラーへの書き換えをする-->
       <%= f.submit "これで決定！", class: "btn btn-primary" %>
     <% end %>
