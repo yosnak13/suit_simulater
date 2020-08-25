@@ -25,11 +25,4 @@ $(function () {
 });
 
 //やること：JQueryで、クリックしたhtmlのvalueをinputタグに渡して送信できるようにする。
-$(function () {
-  $(".sub-box").click(function () {
-    var result = $(".sub-box").val();
-  });
-  $("input[type='submit']").click(function () {
-    console.log(result);
-  });
-});
+

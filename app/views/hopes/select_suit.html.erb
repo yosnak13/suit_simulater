@@ -12,7 +12,7 @@
         </div>
         <div class="col-md-6">
           <div class="main-box">
-            <div class="sub-box" value="ネイビー">
+            <div class="sub-box" id="sss" value="ネイビー">
               <p>ネイビー</p>
               <div class="pattern-navy secList" id="navy">
               </div>
@@ -47,11 +47,18 @@
       </div>
     </div>
   <div class="btn_to_final">
-    <%= form_for @suit_color, url: result_suit_path do |f| %><!--methodどうする？-->
+    <%= form_for @hope_suits, url: result_suit_path do |f| %>
       <!--HopeSuitモデルのsuit_colorカラムに格納したい-->
-      <%= f.hidden_field :suit_color, id:"sample", value: HopeSuit.suit_color, class: "form-control" %>
+      <%= f.hidden_field :suit_color, value: "", id:"sample" %>
       <!--対象のコントローラーへの書き換えをする-->
       <%= f.submit "これで決定！", class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>
+<script>
+$(function () {
+  $("#sss").click(function () {
+    document.querySelector("#sample").value = document.querySelector("#sss").innerText
+  });
+});
+</script>
