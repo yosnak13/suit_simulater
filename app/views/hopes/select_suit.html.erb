@@ -49,7 +49,7 @@
   <div class="btn_to_final">
     <%= form_for @hope_suits, url: result_suit_path do |f| %>
       <!--HopeSuitモデルのsuit_colorカラムに格納したい-->
-      <%= f.hidden_field :suit_color, value: "", id:"sample" %>
+      <%= f.hidden_field :suit_color, value: "", id:"submit" %>
       <!--対象のコントローラーへの書き換えをする-->
       <%= f.submit "これで決定！", class: "btn btn-primary" %>
     <% end %>
@@ -59,7 +59,7 @@
 $(function () {
   $(".sub-box").on("click", function (){
     var result = $(this).attr("id");
-    document.querySelector("#sample").value = result;
+    document.querySelector("#submit").value = result;
   });
 });
 </script>
