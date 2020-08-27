@@ -47,10 +47,8 @@
       </div>
     </div>
   <div class="btn_to_final">
-    <%= form_for @hope_suits, url: result_suit_path do |f| %>
-      <!--HopeSuitモデルのsuit_colorカラムに格納したい-->
+    <%= form_for @hope_suits, :url => {controller: "results", action: "result_suit"} do |f| %>
       <%= f.hidden_field :suit_color, value: "", id:"submit" %>
-      <!--対象のコントローラーへの書き換えをする-->
       <%= f.submit "これで決定！", class: "btn btn-primary" %>
     <% end %>
   </div>
@@ -61,5 +59,30 @@ $(function () {
     var result = $(this).attr("id");
     document.querySelector("#submit").value = result;
   });
+});
+
+$(function () {
+  $(".section").hide();
+  $(".secList").on("click", function () {
+    // クリックした要素の ID と違うクラス名のセクションを非表示
+    $(".section").not($("." + $(this).attr("id"))).hide();
+    // クリックした要素の ID と同じクラスのセクションを表示
+    $("." + $(this).attr("id")).fadeIn(500);
+  });
+});
+
+$(function () {
+  $(".secList").hover(function () {
+    $(this).css("height", "80px");
+    $(this).css("width", "80px");
+    $(this).css("margin-left", "10px");
+    $(this).css("margin-right", "10px");
+  },
+    function () {
+      $(this).css("height", "100px");
+      $(this).css("width", "100px");
+      $(this).css("margin-left", "0px");
+      $(this).css("margin-right", "0px");
+    });
 });
 </script>
