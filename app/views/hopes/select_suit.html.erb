@@ -12,32 +12,32 @@
         </div>
         <div class="col-md-6">
           <div class="main-box">
-            <div class="sub-box" id="sss" value="ネイビー">
+            <div class="sub-box" id="ネイビー">
               <p>ネイビー</p>
               <div class="pattern-navy secList" id="navy">
               </div>
             </div>
-            <div class="sub-box" value="グレー">
+            <div class="sub-box" id="グレー">
               <p>グレー</p>
               <div class="pattern-gray secList" id="gray">
               </div>
             </div>
-            <div class="sub-box" value="ブラック">
+            <div class="sub-box" id="ブラック">
               <p>ブラック</p>
               <div class="pattern secList" id="black">
               </div>
             </div>
-            <div class="sub-box" value="ベージュ">
+            <div class="sub-box" id="ベージュ">
               <p>ベージュ</p>
               <div class="pattern-beige secList" id="beige">
               </div>
             </div>
-            <div class="sub-box" value="チェック">
+            <div class="sub-box" id="チェック">
               <p>チェック</p>
               <div class="pattern-check secList" id="check">
               </div>
             </div>
-            <div class="sub-box" value="ウィンドウペン">
+            <div class="sub-box" id="ウィンドウペン">
               <p>ウィンドウペン</p>
               <div class="pattern-wp secList" id="wp">
               </div>
@@ -57,8 +57,9 @@
 </div>
 <script>
 $(function () {
-  $("#sss").click(function () {
-    document.querySelector("#sample").value = document.querySelector("#sss").innerText
+  $(".sub-box").on("click", function (){
+    var result = $(this).attr("id");
+    document.querySelector("#sample").value = result;
   });
 });
 </script>

@@ -23,6 +23,3 @@ $(function () {
       $(this).css("margin-right", "0px");
     });
 });
-
-//やること：JQueryで、クリックしたhtmlのvalueをinputタグに渡して送信できるようにする。
-
