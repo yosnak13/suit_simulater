@@ -1,5 +1,4 @@
 class HopesController < ApplicationController
-
   def suit
   end
 
@@ -20,10 +19,11 @@ class HopesController < ApplicationController
   end
 
   def create
-    @hope_suits = HopeSuit.new
-    if @hope_suits.save
-      redirect_to result_suit_url
+    @hope_suits = HopeSuit.new(params[:hope_suits]) #hope_suitsモデルのハッシュ？
+    if @hope_suits.save #submitを押したら達成する
+      redirect_to result_suit_user_path
     else
+      flash[:notice] = "色を選んで下さい"
       render 'select_suit'
     end
   end

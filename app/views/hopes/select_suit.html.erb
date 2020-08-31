@@ -47,7 +47,7 @@
       </div>
     </div>
   <div class="btn_to_final">
-    <%= form_for @hope_suits, :url => {controller: "results", action: "result_suit"} do |f| %>
+    <%= form_for @hope_suits, url: result_suit_user_path do |f| %>
       <%= f.hidden_field :suit_color, value: "", id:"submit" %>
       <%= f.submit "これで決定！", class: "btn btn-primary" %>
     <% end %>
@@ -55,13 +55,13 @@
 </div>
 <script>
 $(function () {
+  //クリックした要素のidをsubmitのvalueにする
   $(".sub-box").on("click", function (){
     var result = $(this).attr("id");
     document.querySelector("#submit").value = result;
   });
-});
 
-$(function () {
+  //image_tagを隠し、色をクリックしたら出現させる
   $(".section").hide();
   $(".secList").on("click", function () {
     // クリックした要素の ID と違うクラス名のセクションを非表示
@@ -69,20 +69,19 @@ $(function () {
     // クリックした要素の ID と同じクラスのセクションを表示
     $("." + $(this).attr("id")).fadeIn(500);
   });
-});
 
-$(function () {
+  //ホバーアクション
   $(".secList").hover(function () {
     $(this).css("height", "80px");
     $(this).css("width", "80px");
     $(this).css("margin-left", "10px");
     $(this).css("margin-right", "10px");
   },
-    function () {
-      $(this).css("height", "100px");
-      $(this).css("width", "100px");
-      $(this).css("margin-left", "0px");
-      $(this).css("margin-right", "0px");
-    });
+  function () {
+    $(this).css("height", "100px");
+    $(this).css("width", "100px");
+    $(this).css("margin-left", "0px");
+    $(this).css("margin-right", "0px");
+  });
 });
 </script>
