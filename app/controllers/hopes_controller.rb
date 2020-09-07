@@ -1,12 +1,12 @@
 class HopesController < ApplicationController
-  def suit
-  end
+  # def suit
+  # end
 
-  def shirt
-  end
+  # def shirt
+  # end
 
-  def tie
-  end
+  # def tie
+  # end
 
   def select_suit
     @hope_suits = HopeSuit.new
@@ -19,8 +19,9 @@ class HopesController < ApplicationController
   end
 
   def create
-    @hope_suits = HopeSuit.new(params[:hope_suits]) #hope_suitsモデルのハッシュ？
-    if @hope_suits.save #submitを押したら達成する
+    @hope_suits = HopeSuit.new(params[:id])
+    #@hope_suitsにはidが必要、引数はidで合ってる？
+    if @hope_suits.save
       redirect_to result_suit_user_path
     else
       flash[:notice] = "色を選んで下さい"
@@ -28,3 +29,5 @@ class HopesController < ApplicationController
     end
   end
 end
+#@user ---<- @hope_suits
+#@hope_suits = HopeSuit.new(params[:id]これおかしい？
