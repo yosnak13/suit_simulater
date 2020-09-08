@@ -19,15 +19,14 @@ class HopesController < ApplicationController
   end
 
   def create
-    @hope_suits = HopeSuit.new(params[:id])
-    #@hope_suitsにはidが必要、引数はidで合ってる？
+    @hope_suits = HopeSuit.new
+    #@hope_suitsにはidが必要？引数はidで合ってる？
     if @hope_suits.save
       redirect_to result_suit_user_path
     else
-      flash[:notice] = "色を選んで下さい"
+      flash.now[:notice] = "エラー：色を選んで下さい"
       render 'select_suit'
     end
   end
 end
 #@user ---<- @hope_suits
-#@hope_suits = HopeSuit.new(params[:id]これおかしい？
