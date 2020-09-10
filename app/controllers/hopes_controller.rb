@@ -19,10 +19,9 @@ class HopesController < ApplicationController
   end
 
   def create
-    @hope_suits = current_user.hope_suits.new(suits_params) #user_id
-    #@hope_suitsにはidが必要？引数はidで合ってる？
+    @hope_suits = current_user.hope_suits.new(suits_params) #user_idを持たせる
     if @hope_suits.save
-      flash[:success] = "成功しました！"
+      flash[:success] = "こちらです！"
       redirect_to result_suit_user_path
     else
       flash.now[:notice] = "エラー：色を選んで下さい"

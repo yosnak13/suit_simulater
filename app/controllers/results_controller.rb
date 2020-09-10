@@ -9,8 +9,7 @@ class ResultsController < ApplicationController
     # end
     case @hope_suits.suit_color
     when "ネイビー"
-      @reccomend = "あなたの選んだ色はネイビーなので、あなたに合うシャツは＿＿です"
-      puts <%= image_tag "navy1.jpg", alt:"ネイビー", class:"navy section size" %>
+      @reccomend = img src="navy.jpg" 
     when "グレー"
       @reccomend = "あなたの選んだ色はグレーなので、あなたに合うシャツは＿＿です"
     when "ベージュ"
