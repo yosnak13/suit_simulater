@@ -2,14 +2,10 @@ class ResultsController < ApplicationController
   # MAX_DISPLAY_RELATED_PRODUCTS = 3
   def result_suit
     @hope_suits = current_user.hope_suits.last
-    # if params[:hope_suits] == "チェック" || "ウィンドウペン"
-    #   @shrit = Shirt.where(color: "白")
-    # else
-    #   @shirt = Shirt.where(color: "白").shuffle.take(MAX_DISPLAY_RELATED_PRODUCTS)
-    # end
     case @hope_suits.suit_color
     when "ネイビー"
-      @reccomend = img src="navy.jpg" 
+      @reccomend = "あなたの選んだ色はグレーなので、あなたに合うシャツは＿＿です"
+      @image = image_tag "navy1.jpg" #imgのpathを記入 画像url書けばそれが映るのは確認済み
     when "グレー"
       @reccomend = "あなたの選んだ色はグレーなので、あなたに合うシャツは＿＿です"
     when "ベージュ"
