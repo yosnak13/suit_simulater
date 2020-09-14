@@ -10,7 +10,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-
   }
 
   .suit_result {
@@ -22,16 +21,13 @@
       font-size: 15px;
     }
   }
-  .item_info {
-    margin: 10px;
-  }
-  .recomend {
-    text-align: center;
-    margin: 20px 0;
-  }
+
   .size {
     width: auto;
-    height: 380px;
+    height: 320px;
   }
-
+  .recomend {
+    height: auto;
+    width: 360px;
+  }
 }

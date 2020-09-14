@@ -34,4 +34,3 @@ end
 def suits_params
   params.require(:hope_suit).permit(:suit_color)
 end
-#@user ---<- @hope_suits

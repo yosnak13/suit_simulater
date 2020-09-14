@@ -1,12 +1,19 @@
-<div class="results">
-  <div class="recomend">
-    <h2>あなたにおすすめのスーツ</h2>
-    <p><%= @reccomend %></p>
-    <%= image_tag @image, class:"size"%>
-    <!--<img src= <%= @image %> -->
+<% provide(:title, "Result") %>
+<div class="results container">
+  <h2 class="text-center">あなたにおすすめのスーツ</h2>
+  <div class="row">
+    <div class="col-md-6 text-center">
+      <p><%= @reccomend %></p>
+      <%= image_tag @image, class:"size" %>
+    </div>
+    <div class="col-md-6">
+      <p><%= explanation %></p>
+      <p><%= pattern %></p>
+    </div>
+    <%= link_to "TOPページへ戻る", root_path %>
   </div>
 
-  <div class="main_item">
+  <!--<div class="main_item">
     <div>
       <p>画像</p>
     </div>
@@ -33,11 +40,6 @@
   </div>
 
   <div class="recomend">
-    <btn class="btn">この検索結果を保存する</btn>
-    <!- flashで保存を通知できるようにしたい -->
-  </div>
-
-  <div class="recomend">
-    <%= link_to "TOPページへ戻る", root_path %>
-  </div>
+    <btn class="btn">この検索結果を保存する フラッシュ保存</btn>
+  </div>-->
 </div>

@@ -4,18 +4,23 @@ class ResultsController < ApplicationController
     @hope_suits = current_user.hope_suits.last
     case @hope_suits.suit_color
     when "ネイビー"
-      @reccomend = "あなたの選んだ色はネイビーなので、あなたに合うシャツは＿＿です"
+      @reccomend = "ネイビースーツが選ばれました"
       @image = URI("/assets/navy1.jpg")
     when "グレー"
-      @reccomend = "あなたの選んだ色はグレーなので、あなたに合うシャツは＿＿です"
+      @reccomend = "グレースーツが選ばれました"
+      @image = URI("/assets/right-gray1.jpg")
     when "ベージュ"
-      @reccomend = "あなたの選んだ色はベージュなので、あなたに合うシャツは＿＿です"
+      @reccomend = "ベージュスーツが選ばれました"
+      @image = URI("/assets/beige1.jpg")
     when "ブラック"
-      @reccomend = "あなたの選んだ色はブラックなので、あなたに合うシャツは＿＿です"
+      @reccomend = "ブラックスーツが選ばれました"
+      @image = URI("/assets/black1.jpg")
     when "チェック"
-      @reccomend = "あなたの選んだ色はチェックなので、あなたに合うシャツは＿＿です"
+      @reccomend = "チェック柄スーツが選ばれました"
+      @image = URI("/assets/check1.jpg")
     when "ウィンドウペン"
-      @reccomend = "あなたの選んだ色はウィンドウペンなので、あなたに合うシャツは＿＿です"
+      @reccomend = "ウィンドウペン柄スーツが選ばれました"
+      @image = URI("/assets/windowp1.jpg")
     end
   end
 
