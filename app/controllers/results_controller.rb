@@ -4,8 +4,8 @@ class ResultsController < ApplicationController
     @hope_suits = current_user.hope_suits.last
     case @hope_suits.suit_color
     when "ネイビー"
-      @reccomend = "あなたの選んだ色はグレーなので、あなたに合うシャツは＿＿です"
-      @image = image_tag "navy1.jpg" #imgのpathを記入 画像url書けばそれが映るのは確認済み
+      @reccomend = "あなたの選んだ色はネイビーなので、あなたに合うシャツは＿＿です"
+      @image = URI("/assets/navy1.jpg")
     when "グレー"
       @reccomend = "あなたの選んだ色はグレーなので、あなたに合うシャツは＿＿です"
     when "ベージュ"
