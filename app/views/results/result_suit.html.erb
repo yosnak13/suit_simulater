@@ -1,45 +1,37 @@
 <% provide(:title, "Result") %>
 <div class="results container">
-  <h2 class="text-center">あなたにおすすめのスーツ</h2>
+  <h1 class="text-center">あなたにおすすめのスーツはこちら</h1>
+  <h3 class="text-center"><%= @reccomend %></h3>
   <div class="row">
     <div class="col-md-6 text-center">
-      <p><%= @reccomend %></p>
       <%= image_tag @image, class:"size" %>
     </div>
     <div class="col-md-6">
       <p><%= explanation %></p>
       <p><%= pattern %>バランスがよく清潔感のあるコーデに仕上げることができます</p>
-      <%= link_to "TOPページへ戻る", root_path %>
     </div>
   </div>
-
-  <!--<div class="main_item">
-    <div>
-      <p>画像</p>
-    </div>
-    <div class="suit_result">
-      <p>ジャケット、ネクタイ、シャツの柄の総数は1~1.5個がちょうどいいと言われています（柄ありを1、柄なしを0、素材と模様が同系色なら0.5とした場合）。無地のスーツなら、ネクタイかシャツどちらかに柄ありを使うことでバランスがよく清潔感のあるコーデに仕上げることができます。</p>
-    </div>
-  </div>
-
   <div class="recomend">
     <h3>上記のスーツにはこんなネクタイとシャツが似合うでしょう</h3>
   </div>
-
   <div class="sub_items">
     <div class="item_info">
       <h2>シャツ</h2>
       <p>無地のシャツ</p>
+      <!--ランダムで画像表示したい-->
+      <img src= "<%= recomemded_shirt %>" alt="おすすめのシャツ" class="size">
+      <img src= "<%= recomemded_shirt %>" alt="おすすめのシャツ" class="size">
+      <img src= "<%= recomemded_shirt %>" alt="おすすめのシャツ" class="size">
 
     </div>
     <div class="item_info">
       <h2>ネクタイ</h2>
       <p>ストライプのネクタイ</p>
-
     </div>
   </div>
 
   <div class="recomend">
     <btn class="btn">この検索結果を保存する フラッシュ保存</btn>
+    <p><%= link_to "TOPページへ戻る", root_path %></p>
   </div>-->
 </div>
