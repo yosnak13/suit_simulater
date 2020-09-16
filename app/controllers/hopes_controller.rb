@@ -20,17 +20,17 @@ class HopesController < ApplicationController
 
   def create
     @hope_suits = current_user.hope_suits.new(suits_params) #user_idを持たせる
-    if @hope_suits.save
-      flash[:success] = "こちらです！"
-      redirect_to result_suit_user_path
-    else
+    unless suits_params[:suit_color].present?
       flash.now[:notice] = "エラー：色を選んで下さい"
-      render 'select_suit'
+      render 'select_suit' and return
     end
+    @hope_suits.save
+    flash[:success] = "こちらです！"
+    redirect_to result_suit_user_path
   end
-end
 
   private
-def suits_params
-  params.require(:hope_suit).permit(:suit_color)
+  def suits_params
+    params.require(:hope_suit).permit(:suit_color)
+  end
 end
