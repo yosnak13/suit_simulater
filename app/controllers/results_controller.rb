@@ -22,6 +22,22 @@ class ResultsController < ApplicationController
       @reccomend = "ウィンドウペン柄スーツが選ばれました"
       @image = URI("/assets/windowp1.jpg")
     end
+
+    if @hope_suits.suit_color == "チェック" || @hope_suits.suit_color == "ウィンドウペン"
+      @shirt1 = "無地の白のシャツ"
+      @shirt2 = "無地の青のシャツ"
+      @shirt3 = "無地の黒のシャツ"
+      @tie1 = "ストライプのネクタイ"
+      @tie2 = "無地のネクタイ"
+      @tie3 = "ドットのネクタイ"
+    else
+      @shirt1 = "白のシャツ"
+      @shirt2 = "青のシャツ"
+      @shirt3 = "ストライプのシャツ"
+      @tie1 = "ストライプのネクタイ"
+      @tie2 = "ペイズリーのネクタイ"
+      @tie3 = "無地のネクタイ"
+    end
   end
 
   def result_shirt

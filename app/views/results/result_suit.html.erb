@@ -4,35 +4,42 @@
   <h3 class="text-center"><%= @reccomend %></h3>
   <div class="row">
     <div class="col-md-6 text-center">
-      
       <%= image_tag @image, class:"size" %>
     </div>
     <div class="col-md-6">
       <p><%= explanation %></p>
-      <p><%= pattern %>バランスがよく清潔感のあるコーデに仕上げることができます</p>
+      <p><%= pattern  %>バランスがよく清潔感のあるコーデに仕上げることができます</p>
     </div>
   </div>
-  <div class="recomend">
-    <h3>上記のスーツにはこんなネクタイとシャツが似合うでしょう</h3>
-  </div>
-  <div class="sub_items">
-    <div class="item_info">
-      <h2>シャツ</h2>
-      <p>無地のシャツ</p>
-      <!--ランダムで画像表示したい-->
-      <img src= "<%= recomemded_shirt %>" alt="おすすめのシャツ" class="size">
-      <img src= "<%= recomemded_shirt %>" alt="おすすめのシャツ" class="size">
-      <img src= "<%= recomemded_shirt %>" alt="おすすめのシャツ" class="size">
-
+  <h3 class="text-center">上記のスーツにはこんなネクタイとシャツが似合うでしょう</h3>
+  <div class="row">
+    <div class="col-md-4 col-sm-6 text-center">
+      <h2><%= @shirt1 %></h2>
+      <%= image_tag recomemded_shirt, class:'size' %>
     </div>
-    <div class="item_info">
-      <h2>ネクタイ</h2>
-      <p>ストライプのネクタイ</p>
+    <div class="col-md-4 col-sm-6 text-center">
+      <h2><%= @shirt2 %></h2>
+      <%= image_tag recomemded_shirt, class:'size' %>
+    </div>
+    <div class="col-md-4 col-sm-6 text-center">
+      <h2><%= @shirt3 %></h2>
+      <%= image_tag recomemded_shirt, class:'size' %>
+    </div>
+    <div class="col-md-4 col-sm-6 text-center">
+      <h2><%= @tie1 %></h2>
+      <%= image_tag recomemded_tie, class:'size' %>
+    </div>
+    <div class="col-md-4 col-sm-6 text-center">
+      <h2><%= @tie2 %></h2>
+      <%= image_tag recomemded_tie, class:'size' %>
+    </div>
+    <div class="col-md-4 col-sm-6 text-center">
+      <h2><%= @tie3 %></h2>
+      <%= image_tag recomemded_tie, class:'size' %>
     </div>
   </div>
-
-  <div class="recomend">
+  <div class="recomend text-center">
     <btn class="btn">この検索結果を保存する フラッシュ保存</btn>
     <p><%= link_to "TOPページへ戻る", root_path %></p>
-  </div>-->
+  </div>
 </div>
