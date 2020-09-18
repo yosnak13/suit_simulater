@@ -12,38 +12,37 @@
     </div>
   </div>
   <h3 class="text-center fadein">上記のスーツにはこんなネクタイとシャツが似合うでしょう</h3>
-  <div class="row" id="effect2">
-    <div class="col-md-4 col-sm-6 text-center fadein">
-      <h2><%= @shirt1 %></h2>
-      <%= image_tag @shirt_img1, class:'size' %>
-    </div>
-    <div class="col-md-4 col-sm-6 text-center fadein">
-      <h2><%= @shirt2 %></h2>
-      <%= image_tag @shirt_img2, class:'size' %>
-    </div>
-    <div class="col-md-4 col-sm-6 text-center fadein">
-      <h2><%= @shirt3 %></h2>
-      <%= image_tag @shirt_img3, class:'size' %>
+  <div class="container">
+    <div class="row" id="effect2">
+      <div class="col-md-4 col-sm-6 text-center fadein">
+        <h3><%= @shirt1 %></h3>
+        <%= image_tag @shirt_img1, class:'min-size' %>
+      </div>
+      <div class="col-md-4 col-sm-6 text-center fadein">
+        <h3><%= @shirt2 %></h3>
+        <%= image_tag @shirt_img2, class:'min-size' %>
+      </div>
+      <div class="col-md-4 col-sm-6 text-center fadein">
+        <h3><%= @shirt3 %></h3>
+        <%= image_tag @shirt_img3, class:'min-size' %>
+      </div>
     </div>
     <div class="row" id="effect2">
       <div class="col-md-4 col-sm-6 text-center fadein">
-        <h2><%= @tie1 %></h2>
-        <%= image_tag @tie_img1, class:'size' %>
+        <h3><%= @tie1 %></h3>
+        <%= image_tag @tie_img1, class:'min-size' %>
       </div>
       <div class="col-md-4 col-sm-6 text-center fadein">
-        <h2><%= @tie2 %></h2>
-        <%= image_tag @tie_img2, class:'size' %>
+        <h3><%= @tie2 %></h3>
+        <%= image_tag @tie_img2, class:'min-size' %>
       </div>
       <div class="col-md-4 col-sm-6 text-center fadein">
-        <h2><%= @tie3 %></h2>
-        <%= image_tag @tie_img3, class:'size' %>
+        <h3><%= @tie3 %></h3>
+        <%= image_tag @tie_img3, class:'min-size' %>
       </div>
     </div>
   </div>
-  <div class="recomend text-center">
-    <btn class="btn">この検索結果を保存する フラッシュ保存</btn>
-    <p><%= link_to "TOPページへ戻る", root_path %></p>
-  </div>
+  <p class="text-center"><%= link_to "TOPページへ戻る", root_path %></p>
 </div>
 <script>
 $(window).scroll(function (){
