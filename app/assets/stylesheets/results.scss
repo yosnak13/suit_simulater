@@ -25,4 +25,27 @@
     height: auto;
     width: 360px;
   }
+  .fadein {
+    opacity : 0;
+    transform : translate(0, 50px);
+    transition:all 1.5s;
+}
+  .fadein.scrollin {
+    opacity : 1;
+    transform : translate(0, 0);
+  }
+  /* 2つ目の要素に300msのdelayをかける */
+  #effect2 > div.fadein:nth-of-type(2) {
+    -moz-transition-delay:300ms;
+    -webkit-transition-delay:300ms;
+    -o-transition-delay:300ms;
+    -ms-transition-delay:300ms;
+	}
+/* 3つ目の要素に600msのdelayをかける */
+  #effect2 > div.fadein:nth-of-type(3) {
+    -moz-transition-delay:600ms;
+    -webkit-transition-delay:600ms;
+    -o-transition-delay:600ms;
+    -ms-transition-delay:600ms;
+  }
 }
