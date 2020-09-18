@@ -1,7 +1,7 @@
 <div class="hopes">
   <div class="container">
-    <p class="text-center">あなたが着てみたいスーツの色をボックスの中から選択してください</p>
-      <div class="row wrap-reverse">
+    <h2 class="text-center">あなたが着てみたいスーツの色をボックスの中から選択してください</h2>
+      <div class="row d-flex flex-md-column-reverse">
         <div class="suit_pic col-md-6 text-center">
           <%= image_tag "navy1.jpg", alt:"ネイビー", class:"navy section size" %>
           <%= image_tag "right-gray1.jpg", alt:"グレー", class:"gray section size" %>
@@ -72,14 +72,14 @@ $(function () {
 
   //ホバーアクション
   $(".secList").hover(function () {
-    $(this).css("height", "80px");
-    $(this).css("width", "80px");
+    $(this).css("height", "70px");
+    $(this).css("width", "70px");
     $(this).css("margin-left", "10px");
     $(this).css("margin-right", "10px");
   },
   function () {
-    $(this).css("height", "100px");
-    $(this).css("width", "100px");
+    $(this).css("height", "90px");
+    $(this).css("width", "90px");
     $(this).css("margin-left", "0px");
     $(this).css("margin-right", "0px");
   });
