@@ -2,14 +2,21 @@
   .suit_img {
     background-image: image-url('main.jpg');
     background-size: cover;
-    padding: 200px;
+    padding: 200px 10px;
     margin-bottom: -10px;
+    width: 100%;
+    max-width: 100%;
+    background-position: center;
   }
+
   .jkt_img {
     background-image: image-url('main2.jpg');
     background-size: cover;
     color: white;
-    padding: 200px;
+    padding: 200px 10px;
+    width: 100%;
+    max-width: 100%;
+    background-position: center;
   }
   .items {
     margin: 10px 0;

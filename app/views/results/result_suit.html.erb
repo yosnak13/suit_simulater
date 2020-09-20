@@ -1,8 +1,10 @@
 <% provide(:title, "Result") %>
 <div class="results container">
-  <h1 class="text-center">あなたにおすすめのスーツはこちら</h1>
-  <h3 class="text-center fadein"><%= @reccomend %></h3>
-  <div class="row fadein">
+  <div class="text-center">
+    <h1 class="text-center title">あなたにおすすめのスーツはこちら</h1>
+  </div>
+  <h3 class="text-center fadein your_color"><%= @reccomend %></h3>
+  <div class="row fadein sample">
     <div class="col-md-6 text-center">
       <%= image_tag @image, class:"size" %>
     </div>
@@ -11,7 +13,9 @@
       <p><%= pattern %>バランスがよく清潔感のあるコーデに仕上げることができます</p>
     </div>
   </div>
-  <h3 class="text-center fadein">上記のスーツにはこんなネクタイとシャツが似合うでしょう</h3>
+  <div class="text-center">
+    <h3 class="fadein sub-recommend">上記のスーツにはこんなネクタイとシャツが似合うでしょう</h3>
+  </div>
   <div class="container">
     <div class="row" id="effect2">
       <div class="col-md-4 col-sm-6 text-center fadein">
