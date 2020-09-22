@@ -2,6 +2,7 @@ class ResultsController < ApplicationController
   # MAX_DISPLAY_RELATED_PRODUCTS = 3
   def result_suit
     @hope_suits = current_user.hope_suits.last
+    
     case @hope_suits.suit_color
     when "ネイビー"
       @reccomend = "ネイビースーツが選ばれました"
