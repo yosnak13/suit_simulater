@@ -1,5 +1,5 @@
 <header>
-  <div class="container">
+  <!--<div class="container">
     <div class="navbar-header">
       <h2 class="navber-brand"><%= link_to "Suit simulater", root_path, style:"color:gray" %></h2>
     </div>
@@ -23,5 +23,56 @@
         <% end %>
       </ul>
     </nav>
+  </div>-->
+
+  <div class="container">
+    <div id="header">
+      <h1 class="navber-brand"><%= link_to "Suit simulater", root_path, style:"color:gray" %></h1>
+      <nav>
+        <ul id="navi">
+          <% if logged_in? %>
+            <li><%= link_to "スーツを探す",  select_suit_user_url(current_user) %></li>
+            <li><%= link_to "シャツを探す", select_shirt_user_url(current_user) %></li>
+            <li><%= link_to "ネクタイを探す", select_tie_user_url(current_user) %></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">マイアカウント <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "マイページ", current_user %></li>
+                <li><%= link_to "アカウント情報の変更", edit_user_path(current_user) %></li>
+                <li class="divider"></li>
+                <li><%= link_to "ログアウト", logout_path, method: :delete %></li>
+              </ul>
+            </li>
+          <% else %>
+            <li><%= link_to "ログイン", login_path, class:"btn btn-lg btn-outline-primary"%></li>
+          <% end %>
+        </ul>
+      </nav>
+        <!-- ボタン部分ここを後で追加するだけ-->
+      <div class="nav_btn" id="nav_btn">
+        <span class="hamburger_line hamburger_line1"></span>
+        <span class="hamburger_line hamburger_line2"></span>
+        <span class="hamburger_line hamburger_line3"></span>
+      </div>
+      <div class="nav_bg" id="nav_bg"></div>
+        <!-- /ボタン部分ここを後で追加するだけ-->
+    </div>
   </div>
 </header>
+<script>
+  $(function() {
+            /* SP menu */
+            function toggleNav() {
+                var body = document.body;
+                var hamburger = document.getElementById('nav_btn');
+                var blackBg = document.getElementById('nav_bg');
+                hamburger.addEventListener('click', function() {
+                    body.classList.toggle('nav_open'); //メニュークリックでnav-openというクラスがbodyに付与
+                });
+                blackBg.addEventListener('click', function() {
+                    body.classList.remove('nav_open'); //もう一度クリックで解除
+                });
+            }
+            toggleNav();
+        });
+</script>
