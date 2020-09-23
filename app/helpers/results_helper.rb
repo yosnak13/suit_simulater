@@ -12,7 +12,7 @@ module ResultsHelper
     end
   end
 
-  def xxx(obj)
+  def result_s(obj)
     if obj == "ネイビー"
       "ネイビースーツが選ばれました"
     elsif obj == "グレー"
@@ -27,12 +27,5 @@ module ResultsHelper
       "ウィンドウペンスーツが選ばれました"
     end
   end
-  # def recomemded_shirt
-  #   if @hope_suits.suit_color == "チェック" || @hope_suits.suit_color == "ウィンドウペン"
-  #     URI("https://www.llbean.co.jp/on/demandware.static/-/Sites-llbean-master-catalog/ja_JP/dw823ded91/images/Product/256513_00047_S.JPG")
-  #   else
-  #     URI("https://www.llbean.co.jp/dw/image/v2/BCSL_PRD/on/demandware.static/-/Sites-llbean-master-catalog/ja_JP/dw2cc95042/images/Product/209411_00047_S.JPG?sw=539")
-  #   end
-  # end
 
 end
