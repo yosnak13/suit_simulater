@@ -20,21 +20,17 @@
       </div>
     </div>
   </div>
-
-    <div class="container-fluid black">
-      <div class="search-section">
-        <h2>手持ちのスーツから似合うシャツやネクタイを探すなど、手持ちのアイテムから似合うスーツを作ることも可能です</h2>
-        <% if logged_in? %>
-          <p>ここからさがす</p>
-        <% else %>
-          <h3 class="text-center"><%= link_to "アカウントを作成してシミュレーションしてみましょう", login_path %></h3>
-        <% end %>
-      </div>
+  <div class="container-fluid black">
+    <div class="search-section">
+      <h2>手持ちのスーツから似合うシャツやネクタイを探すなど、手持ちのアイテムから似合うスーツを作ることも可能です</h2>
+      <% if logged_in? %>
+        <p>ここからさがす</p>
+      <% else %>
+        <h3 class="text-center"><%= link_to "アカウントを作成してシミュレーションしてみましょう", login_path %></h3>
+      <% end %>
     </div>
-
-
+  </div>
 <div>
-
 <script>
 $(window).scroll(function (){
   $('.fadein').each(function(){
