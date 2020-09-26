@@ -1,0 +1,2 @@
+class HopeShirt < ApplicationRecord
+end

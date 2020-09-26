@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-
-
-  get 'hopes_shirt/select_shirt'
-
   root 'static_pages#home'
   get 'static_pages/home'
   get '/signup', to:'users#new'
