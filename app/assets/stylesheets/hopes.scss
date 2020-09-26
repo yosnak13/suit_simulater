@@ -11,15 +11,18 @@
     margin-top: 20px;
   }
   /* hopes box  */
-  .suit_pic {
-    margin: auto;
-  }
  .size {
    width: auto;
    max-width: 100%;
    height: 340px;
    object-fit: contain;
    margin: 20px auto;
+ }
+
+ .reverse {
+   display: flex;
+   flex-wrap: wrap-reverse;
+   justify-content: center;
  }
   .main-box {
     align-items: center;
