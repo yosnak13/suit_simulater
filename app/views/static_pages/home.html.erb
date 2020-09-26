@@ -22,22 +22,34 @@
   </div>
   <div class="container text-center">
     <div class="col-md-4 col-cm-6 items">
-      <%= link_to "スーツを探す", select_suit_user_url(current_user), class:"btn btn-lg btn-outline-primary" %>
-      <br>
       <%= image_tag "suit.jpg", size: "300x300", alt:"スーツ画像", class:"img-circle" %>
+        <% if logged_in? %>
+          <h3><%= link_to "スーツを探す",  select_suit_user_url(current_user) %></h3>
+          <h3>早速シミュレートしてみましょう！スーツはビジネスにおいてあなたの印象を決める大切な要素に違いありません。</h3>
+        <% else %>
+          <h3 class="text-center"><%= link_to "アカウントを作成してシミュレーションしてみましょう", login_path %></h3>
+        <% end %>
     </div>
     <div class="col-md-4 col-cm-6 items">
-      <%= link_to "シャツを探す", select_shirt_user_url(current_user), class:"btn btn-lg btn-outline-primary" %>
-      <br>
-        <%= image_tag "shirt1.jpg", size: "300x300", alt:"シャツ画像", class:"img-circle" %>
+      <%= image_tag "shirt1.jpg", size: "300x300", alt:"シャツ画像", class:"img-circle" %>
+        <% if logged_in? %>
+          <h3><%= link_to "シャツを探す",  select_shirt_user_url(current_user) %></h3>
+          <h3>シャツはあなたのスーツとネクタイのバランスを保つ意外と忘れてはいけない存在です。</h3>
+        <% else %>
+          <h3 class="text-center"><%= link_to "アカウントを作成してシミュレーションしてみましょう", login_path %></h3>
+        <% end %>
     </div>
     <div class="col-md-4 col-cm-6 items">
-      <%= link_to "ネクタイを探す", select_tie_user_url(current_user), class:"btn btn-lg btn-outline-primary" %>
-      <br>
-        <%= image_tag "tie.jpg", size: "300x300", alt:"ネクタイ画像", class:"img-circle" %>
+      <%= image_tag "tie.jpg", size: "300x300", alt:"ネクタイ画像", class:"img-circle" %>
+        <% if logged_in? %>
+          <h3><%= link_to "ネクタイを探す",  select_tie_user_url(current_user) %></h3>
+          <h3>ネクタイはその模様と色によって印象がガラッと変わる不思議なアイテムです。あなたに似合う柄を探してみましょう。</h3>
+        <% else %>
+          <h3 class="text-center"><%= link_to "アカウントを作成してシミュレーションしてみましょう", login_path %></h3>
+        <% end %>
     </div>
   </div>
-  <div class="container-fluid black">
+  <!--<div class="container-fluid black">
     <div class="search-section">
       <h2>手持ちのスーツから似合うシャツやネクタイを探すなど、手持ちのアイテムから似合うスーツを作ることも可能です</h2>
       <% if logged_in? %>
@@ -46,7 +58,7 @@
         <h3 class="text-center"><%= link_to "アカウントを作成してシミュレーションしてみましょう", login_path %></h3>
       <% end %>
     </div>
-  </div>
+  </div>-->
 <div>
 <script>
 $(window).scroll(function (){
