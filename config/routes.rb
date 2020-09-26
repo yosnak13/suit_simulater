@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  get 'hopes_shirt/select_shirt'
+
   root 'static_pages#home'
   get 'static_pages/home'
   get '/signup', to:'users#new'
@@ -12,7 +14,7 @@ Rails.application.routes.draw do
       post '/password_reset', to: 'password_resets#create'
       get '/select_suit', to: 'hopes#select_suit'
       post '/select_suit', to: 'hopes#create'
-      get 'select_shirt', to: 'hope_shirts#select_shirt'
+      get 'select_shirt', to: 'hopes_shirt#select_shirt'
       get '/select_tie', to: 'hopes#select_tie'
       # get '/suit', to: 'hopes#suit'
       # get '/shirt', to: 'hopes#shirt'
