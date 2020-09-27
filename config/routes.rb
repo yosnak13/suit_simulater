@@ -11,6 +11,7 @@ Rails.application.routes.draw do
       get '/select_suit', to: 'hopes#select_suit'
       post '/select_suit', to: 'hopes#create'
       get 'select_shirt', to: 'hopes_shirt#select_shirt'
+      post 'select_shirt', to: 'hopes_shirt#create'
       get '/select_tie', to: 'hopes#select_tie'
       # get '/suit', to: 'hopes#suit'
       # get '/shirt', to: 'hopes#shirt'

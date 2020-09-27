@@ -1,2 +1,69 @@
-<h1>HopesShirt#select_shirt</h1>
-<p>Find me in app/views/hopes_shirt/select_shirt.html.erb</p>
+<div class="hopes">
+  <div class="container">
+    <h2 class="text-center">あなたが着てみたいシャツの色をボックスの中から選択してください</h2>
+      <div class="reverse">
+        <div class="col-md-6 text-center">
+          <%= image_tag "navy1.jpg", alt:"ネイビー", class:"navy section size" %>
+          <%= image_tag "right-gray1.jpg", alt:"グレー", class:"gray section size" %>
+          <%= image_tag "check1.jpg", alt:"チェック", class:"check section size" %>
+        </div>
+        <div class="col-md-6">
+          <div class="main-box">
+            <div class="sub-box" id="白無地">
+              <p>ネイビー</p>
+              <div class="pattern-navy secList" id="navy">
+              </div>
+            </div>
+            <div class="sub-box" id="青無地">
+              <p>グレー</p>
+              <div class="pattern-gray secList" id="gray">
+              </div>
+            </div>
+            <div class="sub-box" id="ストライプ（太め）">
+              <p>チェック</p>
+              <div class="pattern-check secList" id="check">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <div class="btn_to_final">
+    <%= form_for @hope_shirts, url: {controller: 'hopes_shirt' , action: 'create' } do |f| %>
+      <%= f.hidden_field :shirt_pattern, value: "", id:"submit" %>
+      <%= f.submit "これで決定！", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+<script>
+$(function () {
+  //クリックした要素のidをsubmitのvalueにする
+  $(".sub-box").on("click", function (){
+    var result = $(this).attr("id");
+    document.querySelector("#submit").value = result;
+  });
+
+  //image_tagを隠し、色をクリックしたら出現させる
+  $(".section").hide();
+  $(".secList").on("click", function () {
+    // クリックした要素の ID と違うクラス名のセクションを非表示
+    $(".section").not($("." + $(this).attr("id"))).hide();
+    // クリックした要素の ID と同じクラスのセクションを表示
+    $("." + $(this).attr("id")).fadeIn(500);
+  });
+
+  //ホバーアクション
+  $(".secList").hover(function () {
+    $(this).css("height", "70px");
+    $(this).css("width", "70px");
+    $(this).css("margin-left", "10px");
+    $(this).css("margin-right", "10px");
+  },
+  function () {
+    $(this).css("height", "90px");
+    $(this).css("width", "90px");
+    $(this).css("margin-left", "0px");
+    $(this).css("margin-right", "0px");
+  });
+});
+</script>
