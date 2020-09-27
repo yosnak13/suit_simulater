@@ -28,4 +28,12 @@ module ResultsHelper
     end
   end
 
+  def shirt_pattern
+    if @hope_shirts.shirt_pattern == "ストライプ"
+      "柄のあるシャツなら、ネクタイかシャツを無地にすることで"
+    else
+      "無地のシャツなら、ネクタイかシャツどちらかに柄ありを使うことで"
+    end
+  end
+
 end
