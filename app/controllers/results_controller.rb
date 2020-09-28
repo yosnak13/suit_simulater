@@ -50,11 +50,14 @@ class ResultsController < ApplicationController
     @hope_shirts = current_user.hope_shirts.last
     case @hope_shirts.shirt_pattern
     when "白無地"
-      @image = URI("/assets/navy1.jpg")
+      @image = URI("https://www.llbean.co.jp/dw/image/v2/BCSL_PRD/on/demandware.static/-/Sites-llbean-master-catalog/ja_JP/dw11e8fc00/images/Product/209410_00047_S.JPG?sw=240")
     when "青無地"
-      @image = URI("/assets/right-gray1.jpg")
+      @image = URI("https://www.llbean.co.jp/dw/image/v2/BCSL_PRD/on/demandware.static/-/Sites-llbean-master-catalog/ja_JP/dw11e8fc00/images/Product/209410_00047_S.JPG?sw=240")
     when "ストライプ（太め）"
-      @image = URI("/assets/beige1.jpg")
+      @image = URI("https://www.llbean.co.jp/dw/image/v2/BCSL_PRD/on/demandware.static/-/Sites-llbean-master-catalog/ja_JP/dwe376dfd9/images/Product/256535_00047_S.JPG?sw=240")
+    end
+
+    if
     end
   end
 
