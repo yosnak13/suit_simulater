@@ -99,6 +99,37 @@
     repeating-linear-gradient( 90deg, #fff 0px 1px, transparent 1px 10px);
   }
 
+  .white_shirt {
+    background   : whitesmoke;
+    border: #fff solid 1px;
+    border-radius: 10%;
+    height       : 90px;
+    width        : 90px;
+  }
+
+  .blue_shirt {
+    background   : skyblue;
+    border: #fff solid 1px;
+    border-radius: 10%;
+    height       : 90px;
+    width        : 90px;
+  }
+
+  .stripe_shirt {
+    border: #fff solid 1px;
+    border-radius: 10%;
+    height       : 90px;
+    width        : 90px;
+    background: repeating-linear-gradient(
+    90deg,     /* 角度の指定 */
+    #fff,      /* 色A ... 開始 */
+    #fff 3px,  /* 色A ... 終了 */
+    #000 3px,      /* 色B ... 開始 */
+    #000 6px   /* 色B ... 終了 */
+  );
+  }
+
+
   .btn_to_final {
     display: flex;
     flex-wrap: wrap;

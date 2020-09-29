@@ -24,8 +24,8 @@ class ResultsController < ApplicationController
       @tie1 = "ストライプのネクタイ"
       @tie2 = "無地のネクタイ"
       @tie3 = "無地（同系色柄）のネクタイ"
-      @shirt_img1 = URI("https://www.llbean.co.jp/dw/image/v2/BCSL_PRD/on/demandware.static/-/Sites-llbean-master-catalog/ja_JP/dw11e8fc00/images/Product/209410_00047_S.JPG?sw=240")
-      @shirt_img2 = URI("https://www.llbean.co.jp/dw/image/v2/BCSL_PRD/on/demandware.static/-/Sites-llbean-master-catalog/ja_JP/dw86804afd/images/Product/291653_00718_S.JPG?sw=240")
+      @shirt_img1 = URI("/assets/white_shirt.jpeg")
+      @shirt_img2 = URI("/assets/blue_shirt.jpeg")
       @shirt_img3 = URI("https://www.llbean.co.jp/dw/image/v2/BCSL_PRD/on/demandware.static/-/Sites-llbean-master-catalog/ja_JP/dwcc34999e/images/Product/300554_38714_S.JPG?sw=240")
       @tie_img1 = URI("https://d1ganai0pp77c0.cloudfront.net/img/goods/1/ECKS261AAR.jpg")
       @tie_img2 = URI("https://d1ganai0pp77c0.cloudfront.net/img/goods/1/TIETES2AAS.jpg")
@@ -37,9 +37,9 @@ class ResultsController < ApplicationController
       @tie1 = "ストライプのネクタイ"
       @tie2 = "ペイズリーのネクタイ"
       @tie3 = "ドットのネクタイ"
-      @shirt_img1 = URI("https://www.llbean.co.jp/dw/image/v2/BCSL_PRD/on/demandware.static/-/Sites-llbean-master-catalog/ja_JP/dwc794d1de/images/Product/291655_00464_S.JPG?sw=240")
-      @shirt_img2 = URI("https://www.llbean.co.jp/dw/image/v2/BCSL_PRD/on/demandware.static/-/Sites-llbean-master-catalog/ja_JP/dw11e8fc00/images/Product/209410_00047_S.JPG?sw=240")
-      @shirt_img3 = URI("https://www.llbean.co.jp/dw/image/v2/BCSL_PRD/on/demandware.static/-/Sites-llbean-master-catalog/ja_JP/dwe376dfd9/images/Product/256535_00047_S.JPG?sw=240")
+      @shirt_img1 = URI("/assets/white_shirt.jpeg")
+      @shirt_img2 = URI("/assets/blue_shirt.jpeg")
+      @shirt_img3 = URI("/assets/stripe.jpeg")
       @tie_img1 = URI("https://d1ganai0pp77c0.cloudfront.net/img/goods/1/ECKS267AAR.jpg")
       @tie_img2 = URI("https://d1ganai0pp77c0.cloudfront.net/img/goods/1/ECKS161AAP.jpg")
       @tie_img3 = URI("https://d1ganai0pp77c0.cloudfront.net/img/goods/1/ECKS064AAD.jpg")
@@ -50,14 +50,39 @@ class ResultsController < ApplicationController
     @hope_shirts = current_user.hope_shirts.last
     case @hope_shirts.shirt_pattern
     when "白無地"
-      @image = URI("https://www.llbean.co.jp/dw/image/v2/BCSL_PRD/on/demandware.static/-/Sites-llbean-master-catalog/ja_JP/dw11e8fc00/images/Product/209410_00047_S.JPG?sw=240")
+      @image = URI("/assets/white_shirt.jpeg")
     when "青無地"
-      @image = URI("https://www.llbean.co.jp/dw/image/v2/BCSL_PRD/on/demandware.static/-/Sites-llbean-master-catalog/ja_JP/dw11e8fc00/images/Product/209410_00047_S.JPG?sw=240")
-    when "ストライプ（太め）"
-      @image = URI("https://www.llbean.co.jp/dw/image/v2/BCSL_PRD/on/demandware.static/-/Sites-llbean-master-catalog/ja_JP/dwe376dfd9/images/Product/256535_00047_S.JPG?sw=240")
+      @image = URI("/assets/blue_shirt.jpeg")
+    when "ストライプ"
+      @image = URI("/assets/stripe.jpeg")
     end
 
-    if
+    if @hope_shirts.shirt_pattern == "ストライプ"
+      @suit1 = "無地のネイビースーツ"
+      @suit2 = "無地のグレースーツ"
+      @suit3 = "無地のブラックスーツ"
+      @tie1 = "ストライプのネクタイ"
+      @tie2 = "無地のネクタイ"
+      @tie3 = "無地（同系色柄）のネクタイ"
+      @suit_img1 = URI("/assets/navy1.jpg")
+      @suit_img2 = URI("/assets/right-gray1.jpg")
+      @suit_img3 = URI("/assets/black1.jpg")
+      @tie_img1 = URI("https://d1ganai0pp77c0.cloudfront.net/img/goods/1/ECKS261AAR.jpg")
+      @tie_img2 = URI("https://d1ganai0pp77c0.cloudfront.net/img/goods/1/TIETES2AAS.jpg")
+      @tie_img3 = URI("https://d1ganai0pp77c0.cloudfront.net/img/goods/1/NVKS051FAS.jpg")
+    else
+      @suit1 = "無地のネイビースーツ"
+      @suit2 = "無地のグレースーツ"
+      @suit3 = "柄ありのスーツ"
+      @tie1 = "ストライプのネクタイ"
+      @tie2 = "ペイズリーのネクタイ"
+      @tie3 = "ドットのネクタイ"
+      @suit_img1 = URI("/assets/navy1.jpg")
+      @suit_img2 = URI("/assets/right-gray1.jpg")
+      @suit_img3 = URI("/assets/windowp1.jpg")
+      @tie_img1 = URI("https://d1ganai0pp77c0.cloudfront.net/img/goods/1/ECKS267AAR.jpg")
+      @tie_img2 = URI("https://d1ganai0pp77c0.cloudfront.net/img/goods/1/ECKS161AAP.jpg")
+      @tie_img3 = URI("https://d1ganai0pp77c0.cloudfront.net/img/goods/1/ECKS064AAD.jpg")
     end
   end
 

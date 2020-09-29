@@ -30,10 +30,19 @@ module ResultsHelper
 
   def shirt_pattern
     if @hope_shirts.shirt_pattern == "ストライプ"
-      "柄のあるシャツなら、ネクタイかシャツを無地にすることで"
+      "柄のあるシャツなら、ネクタイかスーツを無地にすることで"
     else
-      "無地のシャツなら、ネクタイかシャツどちらかに柄ありを使うことで"
+      "無地のシャツなら、ネクタイかスーツどちらかに柄ありを使うことで"
     end
   end
-
+  
+  def result_sh(obj)
+    if obj == "白無地"
+      "白無地のシャツが選ばれました"
+    elsif obj == "青無地"
+      "青無地のシャツが選ばれました"
+    elsif obj == "ストライプ"
+      "ストライプのシャツが選ばれました"
+    end
+  end
 end
