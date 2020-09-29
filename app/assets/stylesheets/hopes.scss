@@ -99,6 +99,7 @@
     repeating-linear-gradient( 90deg, #fff 0px 1px, transparent 1px 10px);
   }
 
+/* シャツページの模様 */
   .white_shirt {
     background   : whitesmoke;
     border: #fff solid 1px;
@@ -126,9 +127,75 @@
     #fff 3px,  /* 色A ... 終了 */
     #000 3px,      /* 色B ... 開始 */
     #000 6px   /* 色B ... 終了 */
-  );
+    );
+  }
+/* ネクタイページの模様 */
+  .stripe_tie {
+    border: #fff solid 1px;
+    border-radius: 10%;
+    height       : 90px;
+    width        : 90px;
+    background-size: auto auto;
+    background-color: rgba(233, 231, 240, 1);
+    background-image: repeating-linear-gradient(135deg, transparent, transparent 3px, rgba(5, 44, 108, 0.93) 3px, rgba(5, 44, 108, 0.93) 29px );
   }
 
+  .normal_tie {
+    border: #fff solid 1px;
+    border-radius: 10%;
+    height       : 90px;
+    width        : 90px;
+    background-size: auto auto;
+    background-color: navy;
+  }
+
+  .dot_tie {
+    border: #fff solid 1px;
+    border-radius: 10%;
+    height       : 90px;
+    width        : 90px;
+    background-color   : #00007f;
+    background-image   : radial-gradient(#ffffff 4%, transparent 7%),
+                        radial-gradient(#ffffff 4%, transparent 7%);
+    background-position: 0 0, 12px 12px;
+    background-size    : 24px 24px;
+  }
+
+  .same_color_tie {
+    border: #fff solid 1px;
+    border-radius: 10%;
+    height       : 90px;
+    width        : 90px;
+    background-size: auto auto;
+    background-color: rgba(27, 55, 193, 1);
+    background-image: repeating-linear-gradient(135deg, transparent, transparent 10px, rgba(20, 58, 228, 1) 10px, rgba(20, 58, 228, 1) 45px );
+  }
+
+  .check_tie {
+    border: #fff solid 1px;
+    border-radius: 10%;
+    height       : 90px;
+    width        : 90px;
+    background-color : #fff;
+    background-image :
+        repeating-linear-gradient(45deg,
+                                  rgba(0, 0, 102, 0.56),
+                                  rgba(0, 0, 102, 0.56) 12px,
+                                  rgba(0, 0, 0, 0) 0,
+                                  rgba(0, 0, 0, 0) 15px),
+        repeating-linear-gradient(315deg,
+                                  rgba(51, 0, 102, 0.50),
+                                  rgba(51, 0, 102, 0.50) 12px,
+                                  rgba(0, 0, 0, 0) 0,
+                                  rgba(0, 0, 0, 0) 15px);
+  }
+  .paisley_tie {
+    border: #fff solid 1px;
+    border-radius: 10%;
+    height       : 90px;
+    width        : 90px;
+    background-image: image-url("paisley.jpg");
+  }
 
   .btn_to_final {
     display: flex;
