@@ -39,7 +39,7 @@ class ResultsController < ApplicationController
       @tie3 = "ドットのネクタイ"
       @shirt_img1 = URI("/assets/white_shirt.jpeg")
       @shirt_img2 = URI("/assets/blue_shirt.jpeg")
-      @shirt_img3 = URI("/assets/stripe.jpeg")
+      @shirt_img3 = URI("/assets/stripe_shirt.jpeg")
       @tie_img1 = URI("https://d1ganai0pp77c0.cloudfront.net/img/goods/1/ECKS267AAR.jpg")
       @tie_img2 = URI("https://d1ganai0pp77c0.cloudfront.net/img/goods/1/ECKS161AAP.jpg")
       @tie_img3 = URI("https://d1ganai0pp77c0.cloudfront.net/img/goods/1/ECKS064AAD.jpg")
@@ -54,7 +54,7 @@ class ResultsController < ApplicationController
     when "青無地"
       @image = URI("/assets/blue_shirt.jpeg")
     when "ストライプ"
-      @image = URI("/assets/stripe.jpeg")
+      @image = URI("/assets/stripe_shirt.jpeg")
     end
 
     if @hope_shirts.shirt_pattern == "ストライプ"
