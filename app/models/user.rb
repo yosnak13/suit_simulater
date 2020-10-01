@@ -2,8 +2,7 @@ class User < ApplicationRecord
   has_many :hope_suits
   has_many :hope_shirts
   has_many :hope_ties
-
-
+  
   attr_accessor :remember_token, :reset_token
   before_save { self.email = email.downcase }
   validates :name, presence: true, length: { maximum: 50 }

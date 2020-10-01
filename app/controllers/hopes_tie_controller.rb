@@ -4,18 +4,18 @@ class HopesTieController < ApplicationController
   end
 
   def create
-    @hope_tie = current_user.hope_tie.new(ties_params)
+    @hope_ties = current_user.hope_ties.new(ties_params)
     unless ties_params[:tie_pattern].present?
       flash.now[:notice] = "エラー：色を選んで下さい"
       render 'select_tie' and return
     end
-    @hope_tie.save
+    @hope_ties.save
     flash[:success] = "こちらです！"
     redirect_to result_tie_user_path
   end
 
   private
   def ties_params
-    params.require(:hope_shirt).permit(:tie_pattern)
+    params.require(:hope_tie).permit(:tie_pattern)
   end
 end

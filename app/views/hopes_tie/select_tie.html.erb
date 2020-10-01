@@ -9,12 +9,12 @@
         </div>
         <div class="col-md-6">
           <div class="main-box">
-            <div class="sub-box" id="白無地">
+            <div class="sub-box" id="無地">
               <p>無地</p>
               <div class="normal_tie secList" id="white">
               </div>
             </div>
-            <div class="sub-box" id="青無地">
+            <div class="sub-box" id="ドット">
               <p>ドット</p>
               <div class="dot_tie secList" id="blue">
               </div>
@@ -24,17 +24,17 @@
               <div class="stripe_tie secList" id="stripe">
               </div>
             </div>
-            <div class="sub-box" id="ストライプ">
+            <div class="sub-box" id="同系色模様">
               <p>同系色模様</p>
               <div class="same_color_tie secList" id="stripe">
               </div>
             </div>
-            <div class="sub-box" id="ストライプ">
+            <div class="sub-box" id="ペイズリー">
               <p>ペイズリー</p>
               <div class="paisley_tie secList" id="stripe">
               </div>
             </div>
-            <div class="sub-box" id="ストライプ">
+            <div class="sub-box" id="チェック">
               <p>チェック</p>
               <div class="check_tie secList" id="stripe">
               </div>
@@ -45,7 +45,7 @@
     </div>
   <div class="btn_to_final">
     <%= form_for @hope_ties, url: {controller: 'hopes_tie' , action: 'create' } do |f| %>
-      <%= f.hidden_field :shirt_pattern, value: "", id:"submit" %>
+      <%= f.hidden_field :tie_pattern, value: "", id:"submit" %>
       <%= f.submit "これで決定！", class: "btn btn-primary" %>
     <% end %>
   </div>
