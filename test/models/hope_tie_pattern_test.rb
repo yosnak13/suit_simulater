@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class HopeTieTest < ActiveSupport::TestCase
+class HopeTiePatternTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

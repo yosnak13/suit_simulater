@@ -1,0 +1,2 @@
+module HopesTiePatternsHelper
+end

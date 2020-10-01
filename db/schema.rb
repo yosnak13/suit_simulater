@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200929051017) do
+ActiveRecord::Schema.define(version: 20201001152402) do
 
   create_table "hope_shirts", force: :cascade do |t|
     t.string "shirt_pattern"
@@ -26,6 +26,14 @@ ActiveRecord::Schema.define(version: 20200929051017) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_hope_suits_on_user_id"
+  end
+
+  create_table "hope_tie_patterns", force: :cascade do |t|
+    t.string "tie_pattern"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_hope_tie_patterns_on_user_id"
   end
 
   create_table "hope_ties", force: :cascade do |t|
