@@ -87,5 +87,19 @@ class ResultsController < ApplicationController
   end
 
   def result_tie
+    @hope_ties = current_user.hope_tie_patterns.last
+    case @hope_ties.hope_tie_patterns
+    when "無地"
+      @image = URI("/assets/white_shirt.jpeg")
+    when "ドット"
+      @image = URI("/assets/blue_shirt.jpeg")
+    when "ストライプ"
+      @image = URI("/assets/stripe_shirt.jpeg")
+    when "同系色模様"
+      @image = URI("/assets/stripe_shirt.jpeg")
+    when "ペイズリー"
+      @image = URI("/assets/stripe_shirt.jpeg")
+    when "チェック"
+      @image = URI("/assets/stripe_shirt.jpeg")
   end
 end
