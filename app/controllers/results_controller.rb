@@ -30,6 +30,7 @@ class ResultsController < ApplicationController
       @tie_img1 = URI("/assets/stripe_tie.jpg")
       @tie_img2 = URI("/assets/no_pattern_tie.jpg")
       @tie_img3 = URI("/assets/same_pattern_tie.jpg")
+    else
       @shirt1 = "白のシャツ"
       @shirt2 = "青のシャツ"
       @shirt3 = "ストライプのシャツ"
