@@ -35,7 +35,7 @@ module ResultsHelper
       "無地のシャツなら、ネクタイかスーツどちらかに柄ありを使うことで"
     end
   end
-  
+
   def result_sh(obj)
     if obj == "白無地"
       "白無地のシャツが選ばれました"
@@ -43,6 +43,30 @@ module ResultsHelper
       "青無地のシャツが選ばれました"
     elsif obj == "ストライプ"
       "ストライプのシャツが選ばれました"
+    end
+  end
+
+  def tie_pattern
+    if @hope_ties.tie_pattern == "ストライプ" || "同系色模様"
+      "無地のネクタイなら、スーツかシャツどちらかに柄を使うことで"
+    else
+      "柄のあるネクタイなら、スーツかシャツを無地にすることで"
+    end
+  end
+
+  def result_ti(obj)
+    if obj == "無地"
+      "無地のネクタイが選ばれました"
+    elsif obj == "ドット"
+      "ドットのネクタイが選ばれました"
+    elsif obj == "ストライプ"
+      "ストライプのネクタイが選ばれました"
+    elsif obj == "同系色模様"
+      "同系色模様のネクタイが選ばれました"
+    elsif obj == "ペイズリー"
+      "ペイズリーのネクタイが選ばれました"
+    elsif obj == "小紋"
+      "小紋のネクタイが選ばれました"
     end
   end
 end

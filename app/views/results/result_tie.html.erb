@@ -3,14 +3,14 @@
   <div class="text-center">
     <h1 class="text-center title">あなたにおすすめのネクタイはこちら</h1>
   </div>
-  <h3 class="text-center fadein your_color"><%= result_sh(@hope_ties.tie_pattern) %></h3>
+  <h3 class="text-center fadein your_color"><%= result_ti(@hope_ties.tie_pattern) %></h3>
   <div class="row fadein sample">
     <div class="col-md-6 text-center">
       <%= image_tag @image, class:"size" %>
     </div>
     <div class="col-md-6">
       <p><%= explanation %></p>
-      <p><%= shirt_pattern %>バランスがよく清潔感のあるコーデに仕上げることができます</p>
+      <p><%= tie_pattern %>バランスがよく清潔感のあるコーデに仕上げることができます</p>
     </div>
   </div>
   <div class="text-center">
@@ -33,16 +33,16 @@
     </div>
     <div class="row" id="effect2">
       <div class="col-md-4 col-sm-6 text-center fadein">
-        <h3><%= @tie1 %></h3>
-        <%= image_tag @tie_img1, class:'min-size' %>
+        <h3><%= @shirt1 %></h3>
+        <%= image_tag @shirt_img1, class:'shirt-min-size' %>
       </div>
       <div class="col-md-4 col-sm-6 text-center fadein">
-        <h3><%= @tie2 %></h3>
-        <%= image_tag @tie_img2, class:'min-size' %>
+        <h3><%= @shirt2 %></h3>
+        <%= image_tag @shirt_img2, class:'shirt-min-size' %>
       </div>
       <div class="col-md-4 col-sm-6 text-center fadein">
-        <h3><%= @tie3 %></h3>
-        <%= image_tag @tie_img3, class:'min-size' %>
+        <h3><%= @shirt3 %></h3>
+        <%= image_tag @shirt_img3, class:'shirt-min-size' %>
       </div>
     </div>
   </div>

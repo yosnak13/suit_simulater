@@ -87,7 +87,7 @@ class ResultsController < ApplicationController
 
   def result_tie
     @hope_ties = current_user.hope_tie_patterns.last
-    case @hope_ties.hope_tie_patterns
+    case @hope_ties.tie_pattern
     when "無地"
       @image = URI("/assets/no_pattern_tie.jpg")
     when "ドット"
@@ -100,6 +100,34 @@ class ResultsController < ApplicationController
       @image = URI("/assets/paisley_tie.jpg")
     when "小紋"
       @image = URI("/assets/point_tie.jpg")
+    end
+
+    if @hope_ties.tie_pattern == "無地" || "同系色模様"
+      @suit1 = "ウィンドウペンのスーツ"
+      @suit2 = "チェックのスーツ"
+      @suit3 = "無地のネイビースーツ"
+      @shirt1 = "白無地のシャツ"
+      @shirt2 = "青無地のシャツ"
+      @shirt3 = "ストライプのシャツ"
+      @suit_img1 = URI("/assets/windowp1.jpg")
+      @suit_img2 = URI("/assets/check1.jpg")
+      @suit_img3 = URI("/assets/navy1.jpg")
+      @shirt_img1 = URI("/assets/white_shirt.jpg")
+      @shirt_img2 = URI("/assets/blue_shirt.jpg")
+      @shirt_img3 = URI("/assets/stripe_shirt.jpg")
+    else
+      @suit1 = "無地のネイビースーツ"
+      @suit2 = "無地のグレースーツ"
+      @suit3 = "無地のブラックスーツ"
+      @shirt1 = "白無地のシャツ"
+      @shirt2 = "青無地のシャツ"
+      @shirt3 = "ストライプのシャツ"
+      @suit_img1 = URI("/assets/navy1.jpg")
+      @suit_img2 = URI("/assets/right-gray1.jpg")
+      @suit_img3 = URI("/assets/windowp1.jpg")
+      @shirt_img1 = URI("/assets/white_shirt.jpg")
+      @shirt_img2 = URI("/assets/blue_shirt.jpg")
+      @shirt_img3 = URI("/assets/stripe_shirt.jpg")
     end
   end
 end
