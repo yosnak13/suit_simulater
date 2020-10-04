@@ -37,9 +37,9 @@ class ResultsController < ApplicationController
       @tie1 = "ストライプのネクタイ"
       @tie2 = "ペイズリーのネクタイ"
       @tie3 = "ドットのネクタイ"
-      @shirt_img1 = URI("/assets/white_shirt.jpeg")
+      @shirt_img1 = URI("/assets/white_shirt.jpg")
       @shirt_img2 = URI("/assets/blue_shirt.jpeg")
-      @shirt_img3 = URI("/assets/stripe_shirt.jpeg")
+      @shirt_img3 = URI("/assets/stripe_shirt.jpg")
       @tie_img1 = URI("https://d1ganai0pp77c0.cloudfront.net/img/goods/1/ECKS267AAR.jpg")
       @tie_img2 = URI("https://d1ganai0pp77c0.cloudfront.net/img/goods/1/ECKS161AAP.jpg")
       @tie_img3 = URI("https://d1ganai0pp77c0.cloudfront.net/img/goods/1/ECKS064AAD.jpg")
@@ -101,5 +101,6 @@ class ResultsController < ApplicationController
       @image = URI("/assets/stripe_shirt.jpeg")
     when "チェック"
       @image = URI("/assets/stripe_shirt.jpeg")
+    end
   end
 end
