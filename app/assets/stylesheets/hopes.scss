@@ -166,7 +166,7 @@
     border-radius: 10%;
     height       : 90px;
     width        : 90px;
-    background-size: auto auto;
+    background-size: auto;
     background-color: rgba(32, 47, 119, 1);
     background-image: repeating-linear-gradient(135deg, transparent, transparent 10px, rgba(13, 29, 100, 1) 10px, rgba(13, 29, 100, 1) 45px );
     }
@@ -176,18 +176,20 @@
     border-radius: 10%;
     height       : 90px;
     width        : 90px;
-    background-color : #fff;
-    background-image :
-        repeating-linear-gradient(45deg,
-                                  rgba(0, 0, 102, 0.56),
-                                  rgba(0, 0, 102, 0.56) 12px,
-                                  rgba(0, 0, 0, 0) 0,
-                                  rgba(0, 0, 0, 0) 15px),
-        repeating-linear-gradient(315deg,
-                                  rgba(51, 0, 102, 0.50),
-                                  rgba(51, 0, 102, 0.50) 12px,
-                                  rgba(0, 0, 0, 0) 0,
-                                  rgba(0, 0, 0, 0) 15px);
+    background-image: image-url("point_tie_min.jpg");
+    background-size: cover;
+    // background-color : #fff;
+    // background-image :
+    //     repeating-linear-gradient(45deg,
+    //                               rgba(0, 0, 102, 0.56),
+    //                               rgba(0, 0, 102, 0.56) 12px,
+    //                               rgba(0, 0, 0, 0) 0,
+    //                               rgba(0, 0, 0, 0) 15px),
+    //     repeating-linear-gradient(315deg,
+    //                               rgba(51, 0, 102, 0.50),
+    //                               rgba(51, 0, 102, 0.50) 12px,
+    //                               rgba(0, 0, 0, 0) 0,
+    //                               rgba(0, 0, 0, 0) 15px);
   }
   .paisley_tie {
     border: #fff solid 1px;
@@ -195,7 +197,7 @@
     height       : 90px;
     width        : 90px;
     background-image: image-url("paisley.jpg");
-    object-fit: cover;
+    background-size: cover;
   }
 
   .btn_to_final {
