@@ -2,10 +2,15 @@
 <div class="static_pages text-center">
   <div class="suit_img">
     <div class="container-fluid">
-      <div class="row text-left">
+      <div class="row text-left fadein">
         <div class="col-md-6 pull-left">
-          <h1 class="fadein xxx">あなたに似合うスーツを探しましょう</h1>
-          <p class="fadein">Suit simulaterはあなたに似合うスーツをバーチャル世界で提案するアプリです。スーツの合わせ方が難しいと思う方、なにかギフトをあげたいがどんな柄を選べば良いかわからない方に一役買います</p>
+          <h1>あなたに似合うスーツを探しましょう</h1>
+          <p>Suit simulaterはあなたに似合うスーツをバーチャル世界で提案するアプリです。スーツの合わせ方が難しいと思う方、なにかギフトをあげたいがどんな柄を選べば良いかわからない方に一役買います</p>
+          <% if logged_in? %>
+            <%= link_to "クリックで探してみる", current_user, class: 'btn btn-default' %>
+            <% else %>
+            <%= link_to "早速トライしてみる", current_user, class: 'btn btn-default' %>
+          <% end %>
         </div>
       </div>
     </div>
@@ -15,7 +20,9 @@
       <div class="row text-left fadein">
         <div class="col-md-6 pull-right">
           <h1>新しくスーツを仕立てたい時のイメージ作りに</h1>
-          <p>新しいスーツが欲しいのに、どんな色や柄がふさわしいかわからない。そんな時にこのサイトでイメージ作りにシミュレートできます</p>
+          <p>新しいスーツが欲しいのに、どんな色や柄がふさわしいかわからない。
+          そんな時にこのサイトでイメージ作りにシミュレートできます</p>
+          <button type="button" class="btn btn-success">Success</button>
         </div>
       </div>
     </div>

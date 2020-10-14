@@ -68,6 +68,18 @@ body {
    background-color: rgba(255, 255, 255, 0.87);
    font-weight: 900;
 }
+.btn {
+  color: white;
+  background-color:#0c6;
+  padding: 10px 30px;
+  font-family: Roboto;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: #6fc;
+  text-decoration: none;
+}
 
 /* footer */
 footer {
@@ -97,6 +109,7 @@ header {
 }
 #header #navi {
   margin-top: 10px;
+  padding-top: 20px;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
