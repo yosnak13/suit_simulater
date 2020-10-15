@@ -7,7 +7,7 @@
           <h1>あなたに似合うスーツを探しましょう</h1>
           <p>Suit simulaterはあなたに似合うスーツをバーチャル世界で提案するアプリです。スーツの合わせ方が難しいと思う方、なにかギフトをあげたいがどんな柄を選べば良いかわからない方に一役買います</p>
           <% if logged_in? %>
-            <%= link_to "クリックで探してみる", current_user, class: 'btn btn-default' %>
+            <%= link_to " ここから探してみる", current_user, class: 'btn btn-default' %>
             <% else %>
             <%= link_to "早速トライしてみる", current_user, class: 'btn btn-default' %>
           <% end %>
@@ -19,15 +19,19 @@
     <div class="container-fluid">
       <div class="row text-left fadein">
         <div class="col-md-6 pull-right">
-          <h1>新しくスーツを仕立てたい時のイメージ作りに</h1>
-          <p>新しいスーツが欲しいのに、どんな色や柄がふさわしいかわからない。
+          <h1>新しくスーツを買うならここでイメージを作りましょう</h1>
+          <p>どんな色や柄がふさわしいかわからない。
           そんな時にこのサイトでイメージ作りにシミュレートできます</p>
-          <button type="button" class="btn btn-success">Success</button>
+          <% if logged_in? %>
+            <%= link_to " シミュレート", current_user, class: 'btn btn-default' %>
+            <% else %>
+            <%= link_to "早速トライしてみる", current_user, class: 'btn btn-default' %>
+          <% end %>
         </div>
       </div>
     </div>
   </div>
-  <div class="container text-center">
+  <!--<div class="container text-center">
     <div class="col-md-4 col-cm-6 items">
       <%= image_tag "suit.jpg", size: "300x300", alt:"スーツ画像", class:"img-circle" %>
         <% if logged_in? %>
@@ -55,6 +59,29 @@
           <h3 class="text-center"><%= link_to "ログインして探す", login_path %></h3>
         <% end %>
     </div>
+  </div>-->
+  <div class="container-fluid">
+    <h1>簡単操作で気軽に使えます</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <%= image_tag "tie.jpg", size: "300x300", alt:"ネクタイ画像", class:"img-circle" %>
+      </div>
+      <div class="col-md-6 text-left">
+        <p>一目でわかるコンテンツ</p>
+        <p>コーディネートの参考にできるギャラリー</p>
+        <p>スーツ、シャツ、ネクタイどれを選んでも最適な組み合わせを提案</p>
+      </div>
+    </div>
+    <p></p>
+  </div>
+  <div class="container-fluid footer_content">
+    <h1 class="text-center">さっそくSuit_simulaterでさがしてみましょう。</h1>
+    <p>たった30秒で結果がわかります</p>
+    <% if logged_in? %>
+      <%= link_to " さっそく探してみる", current_user, class: 'btn btn-default' %>
+    <% else %>
+      <%= link_to "早速トライしてみる", current_user, class: 'btn btn-default' %>
+    <% end %>
   </div>
 <div>
 <script>

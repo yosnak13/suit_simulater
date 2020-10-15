@@ -41,7 +41,11 @@
     margin: -10px, 30px, 50px, 30px;
     padding: 30px;
   }
-  overflow: hidden;
+  .footer_content{
+    padding: 200px 10px;
+    color: #fff;
+    background: linear-gradient(#005AA7, #FFFDE4);
+  }
 }
 /* fadein機能のcss */
 .fadein {
