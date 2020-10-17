@@ -3,7 +3,7 @@
   <div class="suit_img">
     <div class="container-fluid">
       <div class="row text-left fadein">
-        <div class="col-md-6 pull-left home">
+        <div class="col-md-6 pull-left home sample">
           <h1>あなたに似合うスーツを探しましょう</h1>
           <p>Suit simulaterはあなたに似合うスーツをバーチャル世界で提案するアプリです。スーツの合わせ方が難しいと思う方、なにかギフトをあげたいがどんな柄を選べば良いかわからない方に一役買います</p>
           <% if logged_in? %>
@@ -84,15 +84,3 @@
     <% end %>
   </div>
 <div>
-<script>
-$(window).scroll(function (){
-  $('.fadein').each(function(){
-    var elemPos = $(this).offset().top,
-    scroll = $(window).scrollTop(),
-    windowHeight = $(window).height();
-    if (scroll > elemPos - windowHeight + 100){
-      $(this).addClass('scrollin');
-      }
-    });
-  });
-</script>
