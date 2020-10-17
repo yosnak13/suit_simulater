@@ -46,17 +46,5 @@
       </div>
     </div>
   </div>
-  <p class="text-center"><%= link_to "他のアイテムも探してみる", user_path %></p>
+  <p><%= link_to "他のアイテムも探す", user_path, class: 'btn btn-default text-center' %></p>
 </div>
-<script>
-$(window).scroll(function (){
-  $('.fadein').each(function(){
-    var elemPos = $(this).offset().top,
-    scroll = $(window).scrollTop(),
-    windowHeight = $(window).height();
-    if (scroll > elemPos - windowHeight + 200){
-      $(this).addClass('scrollin');
-      }
-    });
-  });
-</script>
