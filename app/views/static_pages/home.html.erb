@@ -2,13 +2,12 @@
 <div class="static_pages text-center">
   <div class="suit_img">
     <div class="container-fluid">
-      <div class="row">
+      <div class="row text-left fadein">
         <div class="col-md-6 text-left pull-left sample">
-          <h1>あなたに似合うスーツを探すことができます</h1>
-          <p>Suit simulaterはスーツの合わせ方が難しいと思う方、なにかギフトをあげたいがどんな柄を選べば良いかわからない方に一役買います</p>
-          <p>ネクタイとスーツの柄の組み合わせ</p>
-          <span>シャツとネクタイの組み合わせ</span>
-          <br>
+          <h1>Suit_simulaterとは？</h1>
+          <p>スーツの合わせ方が難しいと思う方、なにかギフトをあげたいがどんな柄を選べば良いかわからない方へのアプリです</p>
+          <p>スーツの他ネクタイ、シャツも探せます</p>
+          <p>操作は持ってるスーツなどそのアイテムの色を選択するだけ</p>
           <% if logged_in? %>
             <%= link_to " ここから探してみる", current_user, class: 'btn btn-default' %>
             <% else %>
@@ -51,7 +50,7 @@
     <p></p>
   </div>
   <div class="container-fluid footer_content">
-    <h1 class="text-center">さっそくSuit_simulaterでさがしてみましょう。</h1>
+    <h1 class="text-center">早速Suit_simulaterでさがしてみましょう。</h1>
     <p>たった30秒で結果がわかります</p>
     <% if logged_in? %>
       <%= link_to " さっそく探してみる", current_user, class: 'btn btn-default' %>
