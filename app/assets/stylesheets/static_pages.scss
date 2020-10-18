@@ -7,6 +7,9 @@
     width: 100%;
     max-width: 100%;
     background-position: center;
+    @media screen and (max-width: 720px) {
+      background-position: 75%;
+    }
   }
 
   .jkt_img {
@@ -19,8 +22,21 @@
     background-position: center;
   }
 
-  .home {
-    padding: 0 30px;
+  .sample {
+    background-color: rgba(255,255,255,.5);
+    h1 {
+      margin-bottom: 20px;
+      padding: 20px 0;
+    }
+    p {
+      color: #fff;
+      background-color: rgba(0,0,0,.3);
+      padding: 10px 5px;
+    }
+    span {
+      color: blue;
+      background-color: #fff;
+    }
   }
 
   .items {
@@ -51,6 +67,7 @@
     background: linear-gradient(#005AA7, #FFFDE4);
   }
 }
+
 /* fadein機能のcss */
 .fadein {
   opacity: 0;
