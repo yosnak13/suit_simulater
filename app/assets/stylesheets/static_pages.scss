@@ -11,44 +11,13 @@
     }
   }
 
-  .jkt_img {
-    background-image: image-url('main2.jpg');
-    background-size: cover;
-    color: black;
-    padding: 300px 10px;
-    margin-top: 50px;
-    width: 100%;
-    max-width: 100%;
-    // background-position: center;
-    background-repeat:no-repeat;
-    background-position:right 200px bottom 200px;
-    @media screen and (max-width: 720px) {
-      background-position:right 20px top 20px;
-      background-size: cover;
-      height: 400px;
-      padding: 50px 0 50px 80px;
-      margin-top: 0;
-
-      /*背景画像を縮小表示したい*/
-    }
-  }
-  .main_2 {
-    background-color: whitesmoke;
-    .btn {
-      margin: 10px 0;
-    }
-    @media screen and (max-width: 720px) {
-      // background-color: rgba(255,255,255,.5);
-      background-color: whitesmoke;
-      position: relative;
-      top: 30px;
-      right: 0px;
-      /*下に表示させたい*/
-    }
-  }
-
-  .sample {
+  .main_1 {
     background-color: rgba(255,255,255,.5);
+    position: relative;
+    right: 15px;
+    @media screen and (max-width: 720px)  {
+      width: 300px;
+    }
     h1 {
       margin-bottom: 20px;
       padding: 20px 0;
@@ -66,6 +35,47 @@
     }
     .btn {
       margin: 20px 0;
+    }
+  }
+
+  .sss {
+    background-color: #000;
+
+  }
+
+  .jkt_img {
+    background-image: image-url('main2.jpg');
+    background-size: cover;
+    color: black;
+    padding: 300px 10px;
+    margin-top: 50px;
+    width: 100%;
+    max-width: 100%;
+    // background-position: center;
+    background-repeat:no-repeat;
+    background-position:right 200px bottom 200px;
+    @media screen and (max-width: 720px) {
+      background-position:right 40px top 20px;
+      background-size: cover;
+      height: 320px;
+      padding: 50px 0;
+      margin: 20px 0 80px 0;
+      /*背景画像を縮小表示したい*/
+    }
+  }
+  .main_2 {
+    background-color: whitesmoke;
+    .btn {
+      margin: 10px 0;
+    }
+    @media screen and (max-width: 720px) {
+      background-color: rgba(255,255,255,.5);
+      // background-color: whitesmoke;
+      position: relative;
+      top: 100px;
+      right: 0px;
+      width: 300px;
+      /*下に表示させたい*/
     }
   }
 

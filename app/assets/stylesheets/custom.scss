@@ -84,7 +84,7 @@ body {
 /* font-size menue*/
 html { font-size: 62.5%; } /* font-sizeは16pxの62.5%の10px */
 body { font-size: 1.4rem; } /*font-size : 14px と同等*/
-h1 { font-size: 5.0rem; }
+h1 { font-size: 4.0rem; }
 h2 { font-size: 2.6rem; }
 
 @media screen and (max-width: 720px) {
@@ -110,11 +110,21 @@ footer {
 header {
   background-color: #e9f6f5;
 }
+
 #header {
   background-color: #e9f6f5;
   display: flex;
   flex-flow: row wrap;
-  padding: 20px 30px;
+  padding: 20px 20px;
+  @media screen and (max-width: 768px) {
+    padding: 10px 0;
+  }
+  IMG {
+    @media screen and (max-width: 768px) {
+      width: 150px;
+      height: auto;
+    }
+  }
 }
 #header h1 {
   margin-right: auto;

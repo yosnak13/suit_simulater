@@ -3,11 +3,13 @@
   <div class="suit_img">
     <div class="container-fluid">
       <div class="row text-left fadein">
-        <div class="col-md-6 text-left pull-left sample">
+        <div class="col-md-6 text-left pull-left main_1">
           <h1><span>Suit_simulater</span>とは？</h1>
-          <p>スーツ、ネクタイ、シャツの<span>綺麗な組み合わせ</span>を教えるアプリです</p>
-          <p>操作は持ってるスーツなどそのアイテムの色を選択するだけ</p>
-          <p>スーツの他ネクタイ、シャツも探せます</p>
+          <div class="sss">
+            <p>スーツ、ネクタイ、シャツの<span>綺麗な組み合わせ</span>を教えるアプリです</p>
+            <p>操作は持ってるスーツなどそのアイテムの色を選択するだけ</p>
+            <p>スーツの他ネクタイ、シャツも探せます</p>
+          </div>
           <% if logged_in? %>
             <%= link_to " ここから探してみる", current_user, class: 'btn btn-default' %>
             <% else %>
@@ -35,7 +37,7 @@
     </div>
   </div>
   <div class="container-fluid">
-    <h2>簡単操作で気軽に使えます</h2>
+    <h1>簡単操作で気軽に使えます</h1>
     <div class="row">
       <div class="col-md-6">
         <%= image_tag "tie.jpg", size: "300x300", alt:"ネクタイ画像", class:"img-circle" %>
