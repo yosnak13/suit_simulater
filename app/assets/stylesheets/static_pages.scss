@@ -3,7 +3,6 @@
     background-image: image-url('main.jpg');
     background-size: cover;
     padding: 200px 10px;
-    margin-bottom: -10px;
     width: 100%;
     max-width: 100%;
     background-position: center;
@@ -15,11 +14,37 @@
   .jkt_img {
     background-image: image-url('main2.jpg');
     background-size: cover;
-    color: white;
-    padding: 200px 10px;
+    color: black;
+    padding: 300px 10px;
+    margin-top: 50px;
     width: 100%;
     max-width: 100%;
-    background-position: center;
+    // background-position: center;
+    background-repeat:no-repeat;
+    background-position:right 200px bottom 200px;
+    @media screen and (max-width: 720px) {
+      background-position:right 20px top 20px;
+      background-size: cover;
+      height: 400px;
+      padding: 50px 0 50px 80px;
+      margin-top: 0;
+
+      /*背景画像を縮小表示したい*/
+    }
+  }
+  .main_2 {
+    background-color: whitesmoke;
+    .btn {
+      margin: 10px 0;
+    }
+    @media screen and (max-width: 720px) {
+      // background-color: rgba(255,255,255,.5);
+      background-color: whitesmoke;
+      position: relative;
+      top: 30px;
+      right: 0px;
+      /*下に表示させたい*/
+    }
   }
 
   .sample {
@@ -29,13 +54,18 @@
       padding: 20px 0;
     }
     p {
-      color: #fff;
-      background-color: rgba(0,0,0,.3);
-      padding: 10px 5px;
+      // color: #fff;
+      // background-color: rgba(0,0,0,.3);
+      // padding: 10px 5px;
+      span {
+        color: goldenrod;
+      }
     }
     span {
       color: blue;
-      background-color: #fff;
+    }
+    .btn {
+      margin: 20px 0;
     }
   }
 

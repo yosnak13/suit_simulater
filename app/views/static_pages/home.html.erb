@@ -4,10 +4,10 @@
     <div class="container-fluid">
       <div class="row text-left fadein">
         <div class="col-md-6 text-left pull-left sample">
-          <h1>Suit_simulaterとは？</h1>
-          <p>スーツの合わせ方が難しいと思う方、なにかギフトをあげたいがどんな柄を選べば良いかわからない方へのアプリです</p>
-          <p>スーツの他ネクタイ、シャツも探せます</p>
+          <h1><span>Suit_simulater</span>とは？</h1>
+          <p>スーツ、ネクタイ、シャツの<span>綺麗な組み合わせ</span>を教えるアプリです</p>
           <p>操作は持ってるスーツなどそのアイテムの色を選択するだけ</p>
+          <p>スーツの他ネクタイ、シャツも探せます</p>
           <% if logged_in? %>
             <%= link_to " ここから探してみる", current_user, class: 'btn btn-default' %>
             <% else %>
@@ -20,10 +20,11 @@
   <div class="jkt_img">
     <div class="container-fluid">
       <div class="row text-left fadein">
-        <div class="col-md-6 pull-right">
-          <h1>新しくスーツを買うならここでイメージを作りましょう</h1>
+        <div class="col-md-6 pull-right main_2">
+          <h1>イメージ作りの場にしましょう</h1>
           <p>どんな色や柄がふさわしいかわからない。
           そんな時にこのサイトでイメージ作りにシミュレートできます</p>
+          <p>スーツの合わせ方が難しいと思う方、なにかギフトをあげたいがどんな柄を選べば良いかわからない方にも</p>
           <% if logged_in? %>
             <%= link_to " シミュレート", current_user, class: 'btn btn-default' %>
             <% else %>
@@ -34,7 +35,7 @@
     </div>
   </div>
   <div class="container-fluid">
-    <h1>簡単操作で気軽に使えます</h1>
+    <h2>簡単操作で気軽に使えます</h2>
     <div class="row">
       <div class="col-md-6">
         <%= image_tag "tie.jpg", size: "300x300", alt:"ネクタイ画像", class:"img-circle" %>
