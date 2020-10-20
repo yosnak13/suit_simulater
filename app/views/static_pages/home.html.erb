@@ -2,18 +2,19 @@
 <div class="static_pages text-center">
   <div class="suit_img">
     <div class="container-fluid">
-      <div class="row text-left fadein">
-        <div class="col-md-6 text-left pull-left main_1">
+      <div class="row text-left">
+        <div class="col-md-6 text-left pull-left fadein main_1">
           <h1><span>Suit_simulater</span>とは？</h1>
-          <div class="sss">
-            <p>スーツ、ネクタイ、シャツの<span>綺麗な組み合わせ</span>を教えるアプリです</p>
-            <p>操作は持ってるスーツなどそのアイテムの色を選択するだけ</p>
-            <p>スーツの他ネクタイ、シャツも探せます</p>
+          <div>
+            <p>スーツ、ネクタイ、シャツの<span>綺麗な組み合わせ</span>を教えるアプリです。</p>
+            <p>これさえあればスーツを着るのが簡単に。</p>
+            <p>操作は持ってるスーツなどそのアイテムの色を選択するだけ。</p>
+            <p>下のボタンから早速シミュレートしてみましょう！</p>
           </div>
           <% if logged_in? %>
-            <%= link_to " ここから探してみる", current_user, class: 'btn btn-default' %>
+            <%= link_to " ここからシミュレート", current_user, class: 'btn btn-default' %>
             <% else %>
-            <%= link_to "早速トライしてみる", current_user, class: 'btn btn-default' %>
+            <%= link_to "早速トライしてみる", login_path, class: 'btn btn-default' %>
           <% end %>
         </div>
       </div>
@@ -23,10 +24,10 @@
     <div class="container-fluid">
       <div class="row text-left fadein">
         <div class="col-md-6 pull-right main_2">
-          <h1>イメージ作りの場にしましょう</h1>
-          <p>どんな色や柄がふさわしいかわからない。
-          そんな時にこのサイトでイメージ作りにシミュレートできます</p>
-          <p>スーツの合わせ方が難しいと思う方、なにかギフトをあげたいがどんな柄を選べば良いかわからない方にも</p>
+          <h1>欲しいスーツがある？</h1>
+          <p>でもどんな色や柄がふさわしいかわからない。</p>
+          <p>このアプリなら、綺麗な組み合わせを知ることができます！</p>
+          <p>ネクタイなどをプレゼントしたいのに柄を選べば良いかわからない方にも</p>
           <% if logged_in? %>
             <%= link_to " シミュレート", current_user, class: 'btn btn-default' %>
             <% else %>
