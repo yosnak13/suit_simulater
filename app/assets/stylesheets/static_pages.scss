@@ -1,6 +1,7 @@
 .static_pages {
   .suit_img {
     background-image: image-url('main.jpg');
+    overflow: hidden;
     background-size: cover;
     padding: 200px 10px;
     width: 100%;
@@ -60,7 +61,7 @@
       border-bottom: gray 2px solid;
     }
     .btn {
-      margin: 10px 0;
+      margin: 20px 0;
     }
     @media screen and (max-width: 720px) {
       background-color: rgba(255,255,255,.5);
