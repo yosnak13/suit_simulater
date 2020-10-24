@@ -25,10 +25,10 @@
     <div class="container-fluid">
       <div class="row fadein">
         <div class="col-md-6 text-left pull-right main_2">
-          <h1>欲しいスーツがある？</h1>
-          <p>そのスーツに合うシャツやネクタイを探すのにも役立ちます。</p>
+          <h1>欲しいスーツがあるなら？</h1>
+          <p>そのスーツに合う<span>シャツ</span>や<span>ネクタイ</span>を探すのにも役立ちます。</p>
           <p>あるいはネクタイに合うスーツとシャツをさがすことも。</p>
-          <p>例えば、ネクタイをプレゼントしたいあなたには、おすすめの柄を提案します</p>
+          <p>例えば、ネクタイを<span>プレゼント</span>したいあなたには、おすすめの柄を提案します</p>
           <% if logged_in? %>
             <%= link_to " シミュレート", current_user, class: 'btn btn-default text' %>
             <% else %>
@@ -38,18 +38,16 @@
       </div>
     </div>
   </div>
-  <div class="container-fluid">
+  <div class="container-fluid main_3">
     <h1>簡単操作で気軽に使えます</h1>
     <div class="row">
       <div class="col-md-6">
         <%= image_tag "tie.jpg", size: "300x300", alt:"ネクタイ画像", class:"img-circle" %>
       </div>
-      <div class="col-md-6 text-left">
-        <ul>
-          <li>一目でわかるコンテンツ</li>
-          <li>コーディネートの参考にできるギャラリー</li>
-          <li>スーツ、シャツ、ネクタイどれを選んでも最適な組み合わせを提案</li>
-        </u>
+      <div class="col-md-6 text-left main_3_1">
+        <p>一目でわかるコンテンツ</p>
+        <p>コーディネートの参考にできるギャラリ</p>
+        <p>スーツ、シャツ、ネクタイどれを選んでも最適な組み合わせを提案</p>
       </div>
     </div>
     <p></p>

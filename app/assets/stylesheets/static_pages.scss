@@ -10,6 +10,7 @@
     background-position: center;
     @media screen and (max-width: 720px) {
       background-position: 75%;
+      margin-bottom: 0;
     }
   }
 
@@ -30,7 +31,7 @@
     }
     p {
       span {
-        color: goldenrod;
+        color: midnightblue;
         font-size: 2.2rem;
       }
     }
@@ -60,12 +61,16 @@
     }
   }
   .main_2 {
-    background-color: rgba(255,255,255,.5);
-    background-color: white;
+    background-color: rgba(255,255,255,.9);
+    // background-color: white;
     h1 {
       margin-bottom: 20px;
       padding: 20px 0;
       border-bottom: gray 2px solid;
+    }
+    span {
+      color: midnightblue;
+      font-size: 2.5rem;
     }
     .btn {
       margin: 20px 0;
@@ -81,16 +86,20 @@
     }
   }
 
-  .items {
-    margin: 10px 0;
-  }
-  .image {
-    height: 400px;
-    width: auto;
-  }
   .img-circle {
     margin: 10px;
   }
+
+  .main_3 {
+    margin-top: 0;
+    @media screen and (max-width:720px) {
+      margin-top: 200px;
+    }
+  }
+  .main_3_1 {
+      align-items: center;
+    }
+
   .btn-outline-primary {
     color: #007bff;
     border-color: #007bff;
