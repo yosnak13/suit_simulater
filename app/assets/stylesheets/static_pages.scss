@@ -6,6 +6,7 @@
     padding: 200px 10px;
     width: 100%;
     max-width: 100%;
+    margin-bottom: 100px;
     background-position: center;
     @media screen and (max-width: 720px) {
       background-position: 75%;
@@ -13,19 +14,25 @@
   }
 
   .main_1 {
-    // background-color: rgba(255,255,255,.5);
+    background-color: rgba(255,255,255,.5);
     position: relative;
     right: 15px;
     @media screen and (max-width: 720px)  {
-      // width: 300px;
+      background-color: rgba(255,255,255,.8);
     }
     h1 {
       margin-bottom: 20px;
       padding: 20px 0;
       border-bottom: gray 2px solid;
+      span {
+        font-size: 2.5rem;
+      }
     }
-    span {
-      color: blue;
+    p {
+      span {
+        color: goldenrod;
+        font-size: 2.2rem;
+      }
     }
     .btn {
       margin: 20px 0;
