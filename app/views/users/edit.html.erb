@@ -1,31 +1,27 @@
 <% provide(:title, 'Edit user') %>
-<div class="container">
-  <div class="row">
-    <div class="col-md-4 col-md-offset-4">
-    <h1>プロフィール情報</h1>
-      <%= form_for(@user) do |f| %>
-        <%= render 'shared/error_messages' %>
-
-        <%= f.label :Name %>
-        <%= f.text_field :name, class: 'form-control' %>
-
-        <%= f.label :Email %>
-        <%= f.email_field :email, class: 'form-control' %>
-
-        <%= f.label :Age %>
-        <%= f.select :age, [["10~20代","10~20代"],["30代","30代"],["40代","40代"],["50代","50代"],["60代以上","60代以上"]], {prompt:"選択してください"}, {class: 'form-control'} %>
-
-        <%= f.label :Gender %>
-        <%= f.select :gender, [["男性","男性"],["女性","女性"],["その他","その他"]], {prompt:"選択してください"}, {class: 'form-control'} %>
-
-        <%= f.label :Password %>
-        <%= f.password_field :password, class: 'form-control' %>
-
-        <%= f.label :password_confirmation, "Password（confirm）" %>
-        <%= f.password_field :password_confirmation, class: 'form-control' %>
-
-        <%= f.submit "更新する", class: "btn btn-primary" %>
-      <% end %>
+<div class="new">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4 log_in">
+      <h1>プロフィール</h1>
+      <p>ここでアカウント情報の変更ができます</p>
+        <%= form_for(@user) do |f| %>
+          <%= render 'shared/error_messages' %>
+          <%= f.label :名前 %>
+          <%= f.text_field :name, class: 'form-control' %>
+          <%= f.label :メールアドレス %>
+          <%= f.email_field :email, class: 'form-control' %>
+          <%= f.label :年齢 %>
+          <%= f.select :age, [["10~20代","10~20代"],["30代","30代"],["40代","40代"],["50代","50代"],["60代以上","60代以上"]], {prompt:"選択してください"}, {class: 'form-control'} %>
+          <%= f.label :性別 %>
+          <%= f.select :gender, [["男性","男性"],["女性","女性"],["その他","その他"]], {prompt:"選択してください"}, {class: 'form-control'} %>
+          <%= f.label :パスワード %>
+          <%= f.password_field :password, class: 'form-control' %>
+          <%= f.label :password_confirmation, "パスワード（確認）" %>
+          <%= f.password_field :password_confirmation, class: 'form-control' %>
+          <%= f.submit "更新する", class: "btn btn-primary" %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
