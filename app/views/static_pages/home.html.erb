@@ -28,11 +28,11 @@
           <h1>欲しいスーツがあるなら？</h1>
           <p>そのスーツに合う<span>シャツ</span>や<span>ネクタイ</span>を探すのにも役立ちます。</p>
           <p>あるいはネクタイに合うスーツとシャツをさがすことも。</p>
-          <p>例えば、ネクタイを<span>プレゼント</span>したいあなたには、おすすめの柄を提案します</p>
+          <p>例えば、ネクタイを<span>プレゼント</span>したいあなたには、おすすめの柄を提案します。</p>
           <% if logged_in? %>
             <%= link_to " シミュレート", current_user, class: 'btn btn-default text' %>
             <% else %>
-            <%= link_to "早速トライしてみる", current_user, class: 'btn btn-default' %>
+            <%= link_to "早速トライしてみる", login_path, class: 'btn btn-default' %>
           <% end %>
         </div>
       </div>
@@ -51,9 +51,10 @@
       </div>
       <div class="col-md-6 fadein">
         <div class="text-left main_3_1">
-          <p>一目でわかるコンテンツ</p>
-          <p>コーディネートの参考にできるギャラリ</p>
-          <p>スーツ、シャツ、ネクタイどれを選んでも最適な組み合わせを提案</p>
+          <p><span>一目</span>でわかるコンテンツ</p>
+          <p>スーツ、シャツ、ネクタイどこから選んでも<span>最適</span>な組み合わせを提案</p>
+          <p>操作は<span>色か模様</span>を選ぶだけ</p>
+          <p>結果では<span>数パターン</span>のアイテムを表示</p>
         </div>
       </div>
     </div>
@@ -64,7 +65,7 @@
     <% if logged_in? %>
       <%= link_to " さっそく探してみる", current_user, class: 'btn btn-default' %>
     <% else %>
-      <%= link_to "早速トライしてみる", current_user, class: 'btn btn-default' %>
+      <%= link_to "早速トライしてみる", login_path, class: 'btn btn-default' %>
     <% end %>
   </div>
 <div>
