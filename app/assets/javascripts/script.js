@@ -1,6 +1,6 @@
 $(document).on('turbolinks:load', function () {
   $(function () {
-    /* SP menu */
+    // SP menu
     function toggleNav() {
       var body = document.body;
       var hamburger = document.getElementById('nav_btn');
@@ -14,7 +14,7 @@ $(document).on('turbolinks:load', function () {
     }
     toggleNav();
   });
-  
+
 
   $(window).scroll(function () {
     $('.fadein').each(function () {
@@ -66,6 +66,20 @@ $(document).on('turbolinks:load', function () {
         windowHeight = $(window).height();
       if (scroll > elemPos - windowHeight + 50) {
         $(this).addClass('scrollin');
+      }
+    });
+  });
+
+  //home画面の左からfadein
+  var window_h = $(window).height();
+  $(window).on("scroll", function () {
+    var scroll_top = $(window).scrollTop();
+    $(".box").each(function () {
+      var elem_pos = $(this).offset().top;
+      if (scroll_top >= elem_pos - window_h + 300) {
+        $(this).addClass("fadeIn");
+      } else {
+        $(this).removeClass("fadeIn");
       }
     });
   });
