@@ -41,15 +41,7 @@
     }
   }
 
-  .box {
-    transform: translateX(-50px);
-    opacity: 0;
-    transition: opacity 1s, transform 0.5s;
-  }
-  .fadeIn {
-    opacity: 1;
-    transform: translateX(0);
-  }
+
 
   .jkt_img {
     background-image: image-url('main2.jpg');
@@ -71,6 +63,7 @@
       /*背景画像を縮小表示したい*/
     }
   }
+
   .main_2 {
     background-color: rgba(255,255,255,.9);
     // background-color: white;
@@ -136,6 +129,29 @@
     background: linear-gradient(#005AA7, #FFFDE4);
   }
 
+  /* 左右からfadein */
+  .from_left {
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: opacity 1s, transform 0.5s;
+  }
+  .fadein_from_left {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .from_right {
+    transform: translateX(50px);
+    opacity: 0;
+    transition: opacity 1s, transform 0.5s;
+  }
+
+  .fadein_from_right {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* slideshow */
   .slide {
     position: relative;
     width: 320px;
@@ -179,7 +195,7 @@
   }
 }
 
-/* fadein機能のcss */
+/* 下からfadein機能のcss */
 .fadein {
   opacity: 0;
   transform : translate(0, 50px);

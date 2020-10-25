@@ -83,4 +83,30 @@ $(document).on('turbolinks:load', function () {
       }
     });
   });
+  //右からfadein
+  var window_h = $(window).height();
+  $(window).on("scroll", function () {
+    var scroll_top = $(window).scrollTop();
+    $(".from_right").each(function () {
+      var elem_pos = $(this).offset().top;
+      if (scroll_top >= elem_pos - window_h + 300) {
+        $(this).addClass("fadein_from_right");
+      } else {
+        $(this).removeClass("fadein_from_right");
+      }
+    });
+  });
+  //左からfadein
+  var window_h = $(window).height();
+  $(window).on("scroll", function () {
+    var scroll_top = $(window).scrollTop();
+    $(".from_left").each(function () {
+      var elem_pos = $(this).offset().top;
+      if (scroll_top >= elem_pos - window_h + 300) {
+        $(this).addClass("fadein_from_left");
+      } else {
+        $(this).removeClass("fadein_from_left");
+      }
+    });
+  });
 });
