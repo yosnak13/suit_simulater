@@ -2,32 +2,25 @@
 <div class="new">
   <div class="container">
     <div class="row">
-      <div class="text-center">
-        <h1 class="justify-content-center">ログイン</h1>
-        <h3>ログインしてあなたにマッチするスーツコーデを探してみましょう！</h3>
-      </div>
-      <div class="col-md-4 col-md-offset-4 ">
-        <h2>Log in</h2>
+      <div class="col-md-4 col-md-offset-4 log_in">
+        <%= image_tag "logo.png", class:"logo" %>
+        <h1 class="text-center">ログイン</h1>
         <%= form_for(:session, url: login_path) do |f| %>
-
-          <%= f.label :メールアドレス %>
+          <!--<%= f.label :メールアドレス %>-->
           <%= f.email_field :email, class: 'form-control', placeholder:"メールアドレス" %>
-
-          <%= f.label :パスワード %>
-          <%= link_to "(パスワードを忘れたら)", password_reset_user_path(:id) %>
+          <!--<%= f.label :パスワード %>-->
           <%= f.password_field :password, class: 'form-control', placeholder:"パスワード" %>
-
           <%= f.label :remember_me, class: "checkbox inline" do %>
-            <%= f.check_box :remember_me %>
-            <span>パスワードを保存する</span>
-
+          <%= f.check_box :remember_me %>
+          <span>パスワードを保存する</span>
           <% end %>
-
-          <%= f.submit "ログイン", class: "btn btn-primary" %>
+          <%= f.submit "ログイン", class: "btn" %>
         <% end %>
-
-        <p>アカウントをお持ちでない時は?</p>
-        <%= link_to "アカウントを作成しましょう!", signup_path %>
+        <div class="text">
+          <p><%= link_to "パスワードを忘れたら", password_reset_user_path(:id), style:"color:gray;" %></p>
+          <br>
+          <p><%= link_to "アカウント作成はこちら", signup_path, style:"color:gray;" %></p>
+        </div>
       </div>
     </div>
   </div>
