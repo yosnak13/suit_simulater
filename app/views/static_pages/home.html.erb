@@ -38,34 +38,18 @@
       </div>
     </div>
   </div>
-  <!--<div class="jkt_img box">
-    <div class="container-fluid">
-      <div class="row box2">
-        <div class="col-md-6 text-left pull-right main_2">
-          <h1>欲しいスーツがあるなら？</h1>
-          <p>そのスーツに合う<span>シャツ</span>や<span>ネクタイ</span>を探すのにも役立ちます。</p>
-          <p>あるいはネクタイに合うスーツとシャツをさがすことも。</p>
-          <p>例えば、ネクタイを<span>プレゼント</span>したいあなたには、おすすめの柄を提案します</p>
-          <% if logged_in? %>
-            <%= link_to " シミュレート", current_user, class: 'btn btn-default text' %>
-            <% else %>
-            <%= link_to "早速トライしてみる", current_user, class: 'btn btn-default' %>
-          <% end %>
-        </div>
-      </div>
-    </div>
-  </div>-->
   <div class="container main_3">
-    <h1>簡単操作で気軽に使えます</h1>
+    <h1 class="fadein">簡単操作で気軽に使えます</h1>
+    <div class="border_bottom"></div>
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-6 fadein">
         <div class="slide">
           <%= image_tag "tie.jpg", size: "300x300", alt:"ネクタイ画像", class:"img-circle" %>
           <%= image_tag "shirt1.jpg", size: "300x300", alt:"シャツ画像", class:"img-circle" %>
           <%= image_tag "suit.jpg", size: "300x300", alt:"スーツ画像", class:"img-circle" %>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 fadein">
         <div class="text-left main_3_1">
           <p>一目でわかるコンテンツ</p>
           <p>コーディネートの参考にできるギャラリ</p>

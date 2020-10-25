@@ -14,18 +14,6 @@ $(document).on('turbolinks:load', function () {
     }
     toggleNav();
   });
-
-
-  $(window).scroll(function () {
-    $('.fadein').each(function () {
-      var elemPos = $(this).offset().top,
-        scroll = $(window).scrollTop(),
-        windowHeight = $(window).height();
-      if (scroll > elemPos - windowHeight + 100) {
-        $(this).addClass('scrollin');
-      }
-    });
-  });
   //hopes_view
   $(function () {
     //クリックした要素のidをsubmitのvalueにする
@@ -106,6 +94,19 @@ $(document).on('turbolinks:load', function () {
         $(this).addClass("fadein_from_left");
       } else {
         $(this).removeClass("fadein_from_left");
+      }
+    });
+  });
+  //下からfadein
+  $(window).scroll(function () {
+    $('.fadein').each(function () {
+      var elemPos = $(this).offset().top,
+        scroll = $(window).scrollTop(),
+        windowHeight = $(window).height();
+      if (scroll > elemPos - windowHeight + 100) {
+        $(this).addClass('scrollin');
+      } else {
+        $(this).removeClass('scrollin');
       }
     });
   });

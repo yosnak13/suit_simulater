@@ -95,14 +95,18 @@
   }
 
   .main_3 {
-    margin-top: 0;
+    margin-top: -100px;
     h1 {
-      padding: 20px 0;
-      border-bottom: gray 2px solid;
+      padding: 10px 0;
+      // border-bottom: gray 2px solid;
     }
     @media screen and (max-width:720px) {
-      margin-top: 200px;
+      margin-top: 150px;
     }
+  }
+
+  .border_bottom {
+    border-bottom: gray 2px solid;
   }
   .main_3_1 {
     right: 0;
@@ -116,15 +120,9 @@
     }
   }
 
-  .btn-outline-primary {
-    color: #007bff;
-    border-color: #007bff;
-    margin-right: 5px;
-    margin-left: 5px;
-  }
-
   .footer_content{
     padding: 350px 10px;
+    margin-top: 30px;
     color: #fff;
     background: linear-gradient(#005AA7, #FFFDE4);
   }
@@ -135,6 +133,7 @@
     opacity: 0;
     transition: opacity 1s, transform 0.5s;
   }
+
   .fadein_from_left {
     opacity: 1;
     transform: translateX(0);
@@ -186,11 +185,11 @@
     animation :slideshow 24s linear infinite;
   }
 
-  .slide img:nth-child(2){
+  .slide img:nth-child(2) {
     animation-delay: 8s;
   }
 
-  .slide img:last-child{
+  .slide img:last-child {
     animation-delay: 16s;
   }
 }
@@ -198,8 +197,8 @@
 /* 下からfadein機能のcss */
 .fadein {
   opacity: 0;
-  transform : translate(0, 50px);
-  transition : all 1500ms;
+  transform : translate(0, 30px);
+  transition : opacity 1s, transform 0.7s;
 }
 
 .fadein.scrollin{
