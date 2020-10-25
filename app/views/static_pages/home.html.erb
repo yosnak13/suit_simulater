@@ -13,9 +13,9 @@
             <p>下のボタンから早速シミュレートしてみましょう！</p>
           </div>
           <% if logged_in? %>
-            <%= link_to " ここからシミュレート", current_user, class: 'btn btn-default' %>
+            <%= link_to " ここからシミュレート", current_user, class: 'btn' %>
             <% else %>
-            <%= link_to "早速トライしてみる", login_path, class: 'btn btn-default' %>
+            <%= link_to "早速トライしてみる", login_path, class: 'btn' %>
           <% end %>
         </div>
       </div>
@@ -30,9 +30,9 @@
           <p>あるいはネクタイに合うスーツとシャツをさがすことも。</p>
           <p>例えば、ネクタイを<span>プレゼント</span>したいあなたには、おすすめの柄を提案します。</p>
           <% if logged_in? %>
-            <%= link_to " シミュレート", current_user, class: 'btn btn-default text' %>
+            <%= link_to " シミュレート", current_user, class: 'btn' %>
             <% else %>
-            <%= link_to "早速トライしてみる", login_path, class: 'btn btn-default' %>
+            <%= link_to "早速トライしてみる", login_path, class: 'btn' %>
           <% end %>
         </div>
       </div>
@@ -63,9 +63,9 @@
     <h1 class="text-center">早速Suit_simulaterでさがしてみましょう。</h1>
     <p>たった30秒で結果がわかります</p>
     <% if logged_in? %>
-      <%= link_to " さっそく探してみる", current_user, class: 'btn btn-default' %>
+      <%= link_to " さっそく探してみる", current_user, class: 'btn' %>
     <% else %>
-      <%= link_to "早速トライしてみる", login_path, class: 'btn btn-default' %>
+      <%= link_to "早速トライしてみる", login_path, class: 'btn' %>
     <% end %>
   </div>
 <div>

@@ -5,17 +5,17 @@
   <div class="row text-center">
     <div class="col-md-4 col-cm-6 items">
       <%= image_tag "suit.jpg", size: "300x300", alt:"スーツ画像", class:"img-circle" %>
-      <h3><%= link_to "スーツを探す",  select_suit_user_url(current_user) %></h3>
+      <h3><%= link_to "スーツを探す",  select_suit_user_url(current_user), class: 'btn' %></h3>
       <p>早速シミュレートしてみましょう！スーツはビジネスにおいてあなたの印象を決める大切な要素に違いありません。</p>
     </div>
     <div class="col-md-4 col-cm-6 items">
       <%= image_tag "shirt1.jpg", size: "300x300", alt:"シャツ画像", class:"img-circle" %>
-      <h3><%= link_to "シャツを探す",  select_shirt_user_url(current_user) %></h3>
+      <h3><%= link_to "シャツを探す",  select_shirt_user_url(current_user), class: 'btn' %></h3>
       <p>シャツはあなたのスーツとネクタイのバランスを保つ意外と忘れてはいけない存在です。</p>
     </div>
     <div class="col-md-4 col-cm-6 items">
       <%= image_tag "tie.jpg", size: "300x300", alt:"ネクタイ画像", class:"img-circle" %>
-      <h3><%= link_to "ネクタイを探す",  select_tie_user_url(current_user) %></h3>
+      <h3><%= link_to "ネクタイを探す",  select_tie_user_url(current_user), class: 'btn' %></h3>
       <p>ネクタイはその模様と色によって印象がガラッと変わる不思議なアイテムです。あなたに似合う柄を探してみましょう。</p>
     </div>
   </div>

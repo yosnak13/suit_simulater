@@ -1,7 +1,7 @@
 <% provide(:title, "Select") %>
 <div class="hopes">
   <div class="container">
-    <h2 class="text-center">あなたが着てみたいシャツの色をボックスの中から選択してください</h2>
+    <h2 class="text-center">あなたが着てみたい、または持っているシャツの色をボックスの中から選択してください</h2>
       <div class="reverse">
         <div class="col-md-6 text-center">
           <%= image_tag "white_shirt.jpg", alt:"白の無地", class:"white section size" %>
@@ -32,7 +32,7 @@
   <div class="btn_to_final">
     <%= form_for @hope_shirts, url: {controller: 'hopes_shirt' , action: 'create' } do |f| %>
       <%= f.hidden_field :shirt_pattern, value: "", id:"submit" %>
-      <%= f.submit "これで決定！", class: "btn btn-primary" %>
+      <%= f.submit "これで決定！", class: "btn" %>
     <% end %>
   </div>
 </div>
