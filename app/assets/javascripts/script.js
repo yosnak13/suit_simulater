@@ -57,20 +57,6 @@ $(document).on('turbolinks:load', function () {
       }
     });
   });
-
-  //home画面の左からfadein
-  var window_h = $(window).height();
-  $(window).on("scroll", function () {
-    var scroll_top = $(window).scrollTop();
-    $(".box").each(function () {
-      var elem_pos = $(this).offset().top;
-      if (scroll_top >= elem_pos - window_h + 300) {
-        $(this).addClass("fadeIn");
-      } else {
-        $(this).removeClass("fadeIn");
-      }
-    });
-  });
   //右からfadein
   var window_h = $(window).height();
   $(window).on("scroll", function () {
@@ -107,6 +93,17 @@ $(document).on('turbolinks:load', function () {
         $(this).addClass('scrollin');
       } else {
         $(this).removeClass('scrollin');
+      }
+    });
+  });
+  //下からfadeinして戻らないコード
+  $(window).scroll(function () {
+    $('.fadein_only').each(function () {
+      var elemPos = $(this).offset().top,
+        scroll = $(window).scrollTop(),
+        windowHeight = $(window).height();
+      if (scroll > elemPos - windowHeight) {
+        $(this).addClass('scrollin_only');
       }
     });
   });
