@@ -49,5 +49,4 @@ ActiveRecord::Schema.define(version: 20201001152402) do
     t.datetime "reset_sent_at"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
-
 end
