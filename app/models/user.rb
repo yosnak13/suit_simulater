@@ -15,6 +15,8 @@ class User < ApplicationRecord
   # validates :gender, presence: true
   # validates :age, presence: true
 
+  enum gender: { "男性" => "男性", "女性" => "女性", "その他" => "その他" }
+
   # 渡された文字列のハッシュ値を返す
   def self.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
