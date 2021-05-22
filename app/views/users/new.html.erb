@@ -21,7 +21,7 @@
           <%= f.select :age, [["10~20代","10~20代"],["30代","30代"],["40代","40代"],["50代","50代"],["60代以上","60代以上"]], {prompt:"選択してください"}, {class: 'form-control'} %>
 
           <%= f.label :性別 %>
-          <%= f.select :gender, [["男性","男性"],["女性","女性"],["その他","その他"]], {prompt:"選択してください"}, {class: 'form-control'} %>
+          <%= f.select :gender, User.genders, {prompt:"選択してください"}, {class: 'form-control'} %>
 
           <%= f.label :パスワード %>
           <%= f.password_field :password, class: 'form-control' %>
