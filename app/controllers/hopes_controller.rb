@@ -1,7 +1,5 @@
 class HopesController < ApplicationController
-  # def suit
-  # end
-
+  
   def select_suit
     @hope_suits = HopeSuit.new
   end
