@@ -48,7 +48,7 @@
       </div>
     </div>
   <div class="btn_to_final">
-    <%= form_for @hope_ties, url: {controller: 'hopes_tie_patterns' , action: 'create' } do |f| %>
+    <%= form_with model: @hope_ties, url: {controller: 'hopes_tie_patterns' , action: 'create' }, local: true do |f| %>
       <%= f.hidden_field :tie_pattern, value: "", id:"submit" %>
       <%= f.submit "これで決定！", class: "btn" %>
     <% end %>

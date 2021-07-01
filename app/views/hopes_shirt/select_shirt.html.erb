@@ -30,7 +30,7 @@
       </div>
     </div>
   <div class="btn_to_final">
-    <%= form_for @hope_shirts, url: {controller: 'hopes_shirt' , action: 'create' } do |f| %>
+    <%= form_with model: @hope_shirts, url: {controller: 'hopes_shirt' , action: 'create' }, local: true do |f| %>
       <%= f.hidden_field :shirt_pattern, value: "", id:"submit" %>
       <%= f.submit "これで決定！", class: "btn" %>
     <% end %>
